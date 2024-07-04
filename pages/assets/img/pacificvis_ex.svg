@@ -1,5 +1,5 @@
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect width="120%" height="100%" fill="#B22222"/>
+  <rect width="120%" height="100%" fill="#00000"/>
   <text x="50%" y="30%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="20" fill="white">
     <tspan x="50%" dy="0">Welcome to</tspan>
     <tspan x="50%" dy="20">Pacific Visualization</tspan>
