@@ -453,7 +453,7 @@ pre {
   padding-left: 12px;
   margin-right: auto;
   margin-left: auto; 
-  img { height: 100%; width: 100%; }
+  img { height: 25%; width: 25%; }
   img { object-fit: cover;}
 }
   @media (min-width: 576px) {
