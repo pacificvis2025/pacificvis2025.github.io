@@ -8304,6 +8304,7 @@ body[data-dropdown-grid-hover="true"] [data-toggle="dropdown-grid"] + .dropdown-
     border-color: rgba(255, 255, 255, 0.25); } }
 
 footer {
+  background-color: aquamarine;
   padding: 6rem 0; }
 
 .row[class*='flex-'][class*='-column'] > [class*='col'][class*='my-']:first-child {
