@@ -5030,7 +5030,8 @@ button.bg-primary-2:focus {
   background-color: #FFFFFF !important; }
 
 footer.bg-primary-3  {
-  background-color: aquamarine !important; }
+  background-color: #1b1f3b !important;
+  color: white !important; }
 
 a.bg-primary-3:hover, a.bg-primary-3:focus,
 button.bg-primary-3:hover,
