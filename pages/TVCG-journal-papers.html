@@ -56,7 +56,30 @@
         }
       }
     };
-    </script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".dropdown-toggle").forEach(function (dropdown) {
+            dropdown.addEventListener("click", function (event) {
+                let dropdownMenu = this.nextElementSibling;
+
+                // 確保該項目有子選單
+                if (dropdownMenu && dropdownMenu.classList.contains("dropdown-menu")) {
+                    event.preventDefault(); // 只有有子選單的情況下才阻止預設行為
+                    
+                    let dropdownInstance = new bootstrap.Dropdown(dropdown);
+                    dropdownInstance.toggle();
+                }
+            });
+        });
+
+        // 點擊其他地方時關閉所有 dropdown
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".dropdown")) {
+                document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+            }
+        });
+    });
+  </script>
 
   <body>
     <div class="loader">
@@ -64,9 +87,7 @@
     </div>
 
     <div w3-include-html="menuNavBar.html"></div> 
-    <script>
-    includeHTML();
-    </script>
+    
 
     <section class="bg-primary-3 header-inner p-0 jarallax position-relative o-hidden" data-overlay>
       <!-- <img class ="backgroundimg" src="assets/img/Shidabainian.jpg" alt="SHIDABAINIAN"> -->
@@ -358,6 +379,7 @@
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
       <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
+    <script>includeHTML();</script>
     <!-- Required vendor scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/popper.min.js"></script>
