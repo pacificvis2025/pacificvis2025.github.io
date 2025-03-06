@@ -62,12 +62,15 @@
             dropdown.addEventListener("click", function (event) {
                 let dropdownMenu = this.nextElementSibling;
 
-                // 確保該項目有子選單
+                // 只有當該選項有子選單時才觸發 dropdown
                 if (dropdownMenu && dropdownMenu.classList.contains("dropdown-menu")) {
-                    event.preventDefault(); // 只有有子選單的情況下才阻止預設行為
+                    event.preventDefault(); // 阻止預設行為，避免頁面跳轉
                     
-                    let dropdownInstance = new bootstrap.Dropdown(dropdown);
-                    dropdownInstance.toggle();
+                    // 移除所有其他開啟的 dropdown
+                    document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+                    
+                    // 切換當前 dropdown
+                    dropdownMenu.classList.toggle("show");
                 }
             });
         });

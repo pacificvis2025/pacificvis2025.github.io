@@ -88,6 +88,32 @@
         }
       }
     };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".dropdown-toggle").forEach(function (dropdown) {
+            dropdown.addEventListener("click", function (event) {
+                let dropdownMenu = this.nextElementSibling;
+
+                // 只有當該選項有子選單時才觸發 dropdown
+                if (dropdownMenu && dropdownMenu.classList.contains("dropdown-menu")) {
+                    event.preventDefault(); // 阻止預設行為，避免頁面跳轉
+                    
+                    // 移除所有其他開啟的 dropdown
+                    document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+                    
+                    // 切換當前 dropdown
+                    dropdownMenu.classList.toggle("show");
+                }
+            });
+        });
+
+        // 點擊其他地方時關閉所有 dropdown
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".dropdown")) {
+                document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+            }
+        });
+    });
   </script>
 
   <body>
