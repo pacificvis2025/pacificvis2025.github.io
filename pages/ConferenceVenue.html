@@ -11,7 +11,24 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+   
     <style>
+       .grid-container-reception {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'ieee ieee_cs vgtc';
+        text-align: center;
+        gap: 40px;
+        padding: 10px;
+        place-items: center;
+      }
+      
+      .grid-container-reception > div {
+        padding: 20px 0;
+        font-size: 20px;
+      }
+      
       .bus-icon {
         width: 6.25%;
         height: 6.25%;
