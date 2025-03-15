@@ -11,6 +11,62 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+    <style>
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      th, td {
+          border: 1px solid black;
+          text-align: center;
+          padding: 8px;
+      }
+      th {
+          background-color: #f8f9fa;
+          color: #333;
+      }
+      .clicktable{
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .clicktable:hover{
+        filter: brightness(85%);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+      }
+      .registration {
+          background-color: #f4a261;
+      }
+      .keynote {
+          background-color: #ef5350;
+          color: white;
+          font-weight: bold;
+      }
+      .workshop {
+          background-color: #aed581;
+      }
+      .break {
+          background-color: #e1bee7;
+          color: #333333;
+      }
+      .session {
+          background-color: #42a5f5;
+          color: white;
+          font-weight: bold;
+      }
+      .banquet {
+          background-color: #fdd835;
+          color: #333333;
+      }
+      .closing{
+        background-color: #757575;
+        color: white;
+        font-weight: bold;
+      }
+      .to {
+        rotate: 90deg;
+      }
+    </style>
     <!--
     <style>
       .bg-img {
@@ -135,7 +191,78 @@
     <div>
       <div class="container">
         <h1>Conference Program</h1>
-        <p>Coming soon!</p>
+        <table>
+          <tr>
+              <th style="width:10%">Time / Date</th>
+              <th style="width:22.5%">Day 1<br>April 22</th>
+              <th style="width:22.5%">Day 2<br>April 23</th>
+              <th style="width:22.5%">Day 3<br>April 24</th>
+              <th style="width:22.5%">Day 4<br>April 25</th>
+          </tr>
+          <tr>
+              <td>08:30 <div class="to">~</div> 09:00</td>
+              <td class="registration">Registration</td>
+              <td class="registration">Registration</td>
+              <td class="registration">Registration</td>
+              <td class="registration">Registration</td>
+          </tr>
+          <tr style="height:150px">
+              <td>09:00 <div class="to">~</div> 10:30</td>
+              <td class="workshop">Co-located Workshop: TBD</td>
+              <td class="keynote clicktable" onclick="window.location.href='Keynotes.html#Keynotes1'">Opening & Keynote1</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">Graph and Network Visualization</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">Generative AI and Creative Tool<br>(09:00 ~ 10:35)</td>
+          </tr>
+          <tr>
+              <td>10:30 <div class="to">~</div> 11:00</td>
+              <td class="break">Coffee break</td>
+              <td class="break">Coffee break</td>
+              <td class="break">Coffee break</td>
+              <td class="break">Coffee break<br>(10:35 ~ 11:00)</td>
+          </tr>
+          <tr style="height:150px">
+              <td>11:00 <div class="to">~</div> 12:30</td>
+              <td class="workshop">Co-located Workshop: TBD</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">Scientific and Biomedical Visualization</td>
+              <td class="session clicktable" onclick="window.location.href='PostersAndVisualStorytelling.html#PVS'">Poster & Storytelling</td>
+              <td class="keynote clicktable" onclick="window.location.href='Keynotes.html#Keynotes2'">Keynote2<br>(11:00 ~ 12:00)</td>
+          </tr>
+          <tr>
+              <td>12:30 <div class="to">~</div> 13:50</td>
+              <td class="break">Lunch</td>
+              <td class="break">Lunch</td>
+              <td class="break">Lunch</td>
+              <td class="closing">Closing<br>(12:00 ~ 12:20)</td>
+          </tr>
+          <tr style="height:150px">
+              <td>13:50 <div class="to">~</div> 15:30</td>
+              <td class="workshop">Co-located Workshop: TBD</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">AI and Visual LLM</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">3D and Immersive Visualization</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>15:30 <div class="to">~</div> 16:00</td>
+              <td class="break">Coffee break</td>
+              <td class="break">Coffee break</td>
+              <td class="break">Coffee break</td>
+              <td></td>
+          </tr>
+          <tr style="height:150px">
+              <td>16:00 <div class="to">~</div> 17:45</td>
+              <td class="workshop">Co-located Workshop: TBD</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">Visualization Techniques and Methods</td>
+              <td class="session clicktable" onclick="window.location.href='TechnicalSessions.html#TS'">Applications<br>(106 mins)</td>
+              <td></td>
+          </tr>
+          <tr style="height:100px">
+              <td>18:00 <div class="to">~</div></td>
+              <td class="banquet">Welcome Reception</td>
+              <td></td>
+              <td class="banquet">Banquet</td>
+              <td></td>
+          </tr>
+        </table>
         <!-- <p class="lead px-xl-5">The Visual Data Storytelling contest hosts its <a href="change the href here">own website</a> </p> -->
       </div>
     </div>
