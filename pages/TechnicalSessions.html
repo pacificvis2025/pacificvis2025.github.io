@@ -42,6 +42,9 @@
         font-weight: bold;
         margin-right: 8px;
       }
+      .hidden {
+        display: none;
+      }
     </style>
     <!--
     <style>
@@ -167,13 +170,30 @@
     <div>
       <div class="container">
         <h1>Full Papers</h1>
+        <hr>
         <h3>Coding</h3>
         <h5><span class="badge-tvcg">tvcg</span><strong>Papers accepted in Journal track</strong></h5>
         <h5><span class="badge-conf">conf</span><strong>Papers accepted in Conference track</strong></h5>
         <h5><span class="badge-note">note</span><strong>Papers accepted in Visualization Notes track</strong></h5>
         <br>
 
-        <h3>TVCG Journal-Track Papers</h3>
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Papers Filter&nbsp;&nbsp;<span style="font-size: 12px;">▼</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item"><label><input type="checkbox" class="filter-checkbox" value="tvcg" checked onchange="applyFilters()"> &nbsp;<span class="badge-tvcg">tvcg</span></label></a>
+            <a class="dropdown-item"><label><input type="checkbox" class="filter-checkbox" value="conf" checked onchange="applyFilters()"> &nbsp;<span class="badge-conf">conf</span></label></a>
+            <a class="dropdown-item"><label><input type="checkbox" class="filter-checkbox" value="note" checked onchange="applyFilters()"> &nbsp;<span class="badge-note">note</span></label></a>
+          </div>
+        </div>
+        <hr>
+
+        <div class="paper tvcg">
+          <br>
+          <h3>TVCG Journal-Track Papers</h3>
+        </div>
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>A General Framework for Augmenting Lossy Compressors with Topological Guarantees</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -184,7 +204,9 @@
             <li>Bei Wang (University of Utah)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Approximate Puzzlepiece Compositing</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -193,7 +215,9 @@
             <li>Valerio Pascucci (University of Utah)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Explorable INR: An Implicit Neural Representation for Ensemble Simulation Enabling Efficient Spatial and Parameter Exploration</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -205,7 +229,9 @@
             <li>Han-Wei Shen (The Ohio State University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>InsightLens: Augmenting LLM-Powered Data Analysis with Interactive Insight Management and Navigation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -219,7 +245,9 @@
             <li>Wei Chen (Zhejiang University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>InclusiViz: Visual Analytics of Human Mobility Data for Understanding and Mitigating Urban Segregation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -230,7 +258,9 @@
             <li>Dongyu Liu (University of California at Davis)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Human-Guided Image Generation for Expanding Small-Scale Training Image Datasets</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -243,7 +273,9 @@
             <li>Zhuo Tang (Hunan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Investigating Visual Perception of Degree Centrality in Graph Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -258,7 +290,9 @@
             <li>Ying Zhao (Central South University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -271,7 +305,9 @@
             <li>Siming Chen (Fudan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>VisTaxa: Developing a Taxonomy of Historical Visualizations</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -284,7 +320,9 @@
             <li>Xiaoru Yuan (Peking University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>DTBIA: An Immersive Visual Analytics System for Brain-Inspired Research</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -299,7 +337,9 @@
             <li>Siming Chen (Fudan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Accelerating Computation of Stable Merge Tree Edit Distances using Parameterized Heuristics</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -308,7 +348,9 @@
             <li>Christoph Garth (RPTU Kaiserslautern-Landau)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>PrettiSmart: Visual Interpretation of Smart Contracts via Simulation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -319,7 +361,9 @@
             <li>Yong WANG (Nanyang Technological University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>SurfPatch: Enabling Patch Matching for Exploratory Stream Surface Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -327,7 +371,9 @@
             <li>Chaoli Wang (University of Notre Dame)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>iVR-GS: Inverse Volume Rendering for Explorable Visualization via Editable 3D Gaussian Splatting</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -336,7 +382,9 @@
             <li>Chaoli Wang (University of Notre Dame)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>IntiVisor: A Visual Analytics System for Interaction Log Analysis</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -345,7 +393,9 @@
             <li>John Stasko (Georgia Institute of Technology)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper tvcg">
         <p><span class="badge-tvcg">tvcg</span><strong>Multi-Criteria Decision Analysis for Aiding Glyph Design</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -354,9 +404,13 @@
             <li>Min Chen (University of Oxford)</li>
           </ul>
         </div>
+        </div>
 
-        <br>
-        <h3>Conference-Track Papers</h3>
+        <div class="paper conf">
+          <br>
+          <h3>Conference-Track Papers</h3>
+        </div>
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Cytosplore EvoViewer: Visual Analytics of Conserved Evolutionary Patterns in multi-species single-cell sequencing data</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -370,7 +424,9 @@
             <li>Thomas Höllt (Delft University of Technology)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>GenQA : A Method for Generating and Validating Question/Answer Pairs from Journalistic Data Material</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -379,7 +435,9 @@
             <li>Thomas Hurtut (Polytechnique Montreal)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Social Media Island: Interactive User Profiling and Information Diffusion Exploration with 3D Visual Metaphors</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -394,7 +452,9 @@
             <li>Siming Chen (Fudan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Contribution of Data Visualization to Decision-Making: A Classification of Data Visualization Research Based on the Characteristics of Decision Problems</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -404,7 +464,9 @@
             <li>Kazuo Misue (University of Tsukuba)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Utilizing Typographic Layout to Faithfully and Metaphorically Visualize One Dimensional Chaos</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -413,7 +475,9 @@
             <li>Guoying Yang (Jiangnan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>AMGSRN++: Improved Adaptive SRN for Scientific Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -421,7 +485,9 @@
             <li>Han-Wei Shen (The Ohio State University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Visual Analytics of Ball Handlers’ Decisions in Basketball Games</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -435,7 +501,9 @@
             <li>Yingcai Wu (Zhejiang University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>ParkView: Visualizing Monotone Interleavings</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -449,7 +517,9 @@
             <li>Michael Hoffmann (ETH Zürich)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>GeoPet: Interactive Prompt Engineering for Enhancing Tool Calling of Large Language Models in Geospatial Tasks</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -462,7 +532,9 @@
             <li>Mingliang Xu (Zhengzhou University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>GroupRugs: Visual Summaries for Groups in Collective Movement Data</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -471,7 +543,9 @@
             <li>Kevin Verbeek (Eindhoven University of Technology)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Enabling Fast and Accurate Crowdsourced Annotation for Elevation-Aware Flood Extent Mapping</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -484,7 +558,9 @@
             <li>sidharth kumar (University of Illinois at Chicago)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Fast Fiber Surface and Fiber Line Extraction for Bivariate Scalar Fields using Dual Bounding Volume Hierarchy Traversal</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -494,7 +570,9 @@
             <li>Christian Heine (Leipzig University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>POEM: Interactive Prompt Optimization for Enhancing Multimodal Reasoning of Large Language Models</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -506,7 +584,9 @@
             <li>Huamin Qu (The Hong Kong University of Science and Technology)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>More Than Beautiful: Exploring Design Features, Practical Perspectives, and Implications of Artistic Data Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -516,7 +596,9 @@
             <li>Xiaofan Ma (Sun Yat-sen University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Visual Text Mining with Progressive Taxonomy Construction for Envionrmental Studies</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -526,7 +608,9 @@
             <li>Kwan-Liu Ma (University of California at Davis)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>SmartMLVs: LLM-enabled Multiple Linked Views Generation for Interactive Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -539,7 +623,9 @@
             <li>Siming Chen (Fudan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>MTvis: Understanding and Optimizing Microbial Time-series Data Augmentation Model via Interactive Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -548,7 +634,9 @@
             <li>Xue Liang (Beijing Technology and Business University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>XGraphRAG: Interactive Visual Analysis for Graph-based Retrieval-Augmented Generation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -561,7 +649,9 @@
             <li>Wei Chen (Zhejiang University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>PartFlow: A Visualization Tool for Application Partitioning and Workload Offloading in Mobile Edge Computing</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -571,7 +661,9 @@
             <li>Dr. Wei Cai (University of Washington)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>SportsBuddy: Designing and Evaluating an AI-Powered Sports Video Storytelling Tool Through Real-World Deployment</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -585,7 +677,9 @@
             <li>Chen Zhu-Tian (University of Minnesota-Twin Cities)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>REMIXTAPE: Enriching Narratives about Metrics with Semantic Alignment and Contextual Recommendation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -594,7 +688,9 @@
             <li>Arjun Srinivasan (Databricks)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>The Joy of Co-Painting: Creative Human-AI Collaboration for Traceable Image-Generation Workflows</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -603,7 +699,9 @@
             <li>Kuno Kurzhals (University of Stuttgart)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>ViSNeRF: Efficient Multidimensional Neural Radiance Field Representation for Visualization Synthesis of Dynamic Volumetric Scenes</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -612,7 +710,9 @@
             <li>Chaoli Wang (University of Notre Dame)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Navigating Color Constraints in Multi-View Visualizations with MVcolor</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -623,7 +723,9 @@
             <li>Wen-Chieh Lin (National Yang Ming Chiao Tung University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>ST&sup2;VR: An Interactive Authoring System for SpatioTemporal STorytelling in Virtual Reality with Hierarchical Narrative Structure</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -636,7 +738,9 @@
             <li>Siming Chen (Fudan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>Waltzboard: Multi-Criteria Automated Dashboard Design for Exploratory Analysis</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -644,7 +748,9 @@
             <li>Jaemin Jo (Sungkyunkwan University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper conf">
         <p><span class="badge-conf">conf</span><strong>AutoMA: Automated Generation of Multi-level Annotations for Time Series Visualization</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -658,9 +764,13 @@
             <li>Ronghua Liang (Zhejiang University of Technology)</li>
           </ul>
         </div>
+        </div>
 
-        <br>
-        <h3>Visualization-Notes-Track Papers</h3>
+        <div class="paper note">
+          <br>
+          <h3>Visualization-Notes-Track Papers</h3>
+        </div>
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>MATIC: Multilingual Accurate Textual Image Customization via Joint Generative Artificial Intelligence</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -668,7 +778,9 @@
             <li>I-WEI LAI (National Taiwan Normal University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Visual Attention Exploration in Vision-Based Mamba Models</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -678,7 +790,9 @@
             <li>Mahashweta Das (Visa Research)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Meta-INR: Efficient Encoding of Volumetric Data via Meta-Learning Implicit Neural Representation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -687,7 +801,9 @@
             <li>Chaoli Wang (University of Notre Dame)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Evaluating ‘Graphical Perception’ with Multimodal LLMs</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -697,7 +813,9 @@
             <li>Daniel Haehn (University of Massachusetts Boston)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Link Prediction Research Based on Visual Analysis: Expansion of the LERTR Index and System Validation</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -709,7 +827,9 @@
             <li>Dr. Yanlin Zhu (Chengdu Advanced Metal Materials Industry Technology Research Institute Co., Ltd.)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -720,7 +840,9 @@
             <li>Tak Yeon Lee (KAIST)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>New Quality Metrics for Connectivity-faithful Sampling and Drawing of Dynamic Graphs</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -729,7 +851,9 @@
             <li>Yongcheng Jing (University of Sydney)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Automated Pipeline for Detecting and Analyzing Misleading Visual Elements</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -742,7 +866,9 @@
             <li>Prof. Jinwook Seo (Seoul National University)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>dcGG, dcRNG: New Degree-Constrained Shape-Based Faithfulness Metrics</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -752,7 +878,9 @@
             <li>Amyra Meidiana (University of Sydney)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>Accelerating Web-Based Graph Drawing with Bottom-Up GPU Quadtree Construction</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -763,7 +891,9 @@
             <li>sidharth kumar (University of Illinois Chicago)</li>
           </ul>
         </div>
+        </div>
 
+        <div class="paper note">
         <p><span class="badge-note">note</span><strong>A Reflection on Leveraging Vision Language Model for Visual Analysis in Image-Based Person Re-Identification</strong></p>
         <div class="d-flex align-items-center my-2">
           <ul>
@@ -773,6 +903,7 @@
             <li>Guodao Sun (Zhejiang University of Technology)</li>
             <li>Ronghua Liang (Zhejiang University of Technology)</li>
           </ul>
+        </div>
         </div>
 
         </div>
@@ -920,6 +1051,22 @@
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
       <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
+    <script>
+        function applyFilters() {
+            let selectedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
+                                     .map(checkbox => checkbox.value);
+            
+            let papers = document.querySelectorAll('.paper');
+            papers.forEach(paper => {
+                let matches = selectedFilters.some(filter => paper.classList.contains(filter));
+                if (matches) {
+                    paper.classList.remove('hidden');
+                } else {
+                    paper.classList.add('hidden');
+                }
+            });
+        }
+    </script>
     <script>includeHTML();</script>
     <!-- Required vendor scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
