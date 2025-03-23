@@ -45,6 +45,9 @@
       .hidden {
         display: none;
       }
+      html {
+        scroll-padding-top: 100px; /* 根據你的 navbar 高度自行調整 */
+      }
     </style>
     <!--
     <style>
@@ -119,6 +122,29 @@
     });
   </script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hash = window.location.hash; // 例如 #Session1
+
+      if (hash.startsWith("#Session")) {
+        const sessionId = hash.substring(1); // Session1
+        const panelId = "panel-" + sessionId.replace("Session", ""); // panel-1
+
+        const collapse = document.getElementById(panelId);
+        if (collapse) {
+          collapse.classList.add("show"); // 展開 collapse 區塊
+
+          // 解除控制按鈕的 collapsed 樣式，讓箭頭或圖示正確
+          const toggleBtn = document.querySelector(`[data-target="#${panelId}"]`);
+          if (toggleBtn) {
+            toggleBtn.classList.remove("collapsed");
+            toggleBtn.setAttribute("aria-expanded", "true");
+          }
+        }
+      }
+    });
+  </script>
+
   <body>
     <div class="loader">
       <div class="loading-animation"></div>
@@ -165,7 +191,7 @@
         <img class="bg-primary" src="assets/img/decorations/deco-blob-3.svg" alt="deco-blob-3 decoration" data-inject-svg />
       </div> -->
     </section>
-    <br id="TS">
+    <br>
     <br>
     <div>
       <div class="container">
@@ -189,7 +215,824 @@
         </div>
         <hr>
 
-        <div class="paper tvcg">
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" id="Session1">
+          <div data-target="#panel-1" class="accordion-panel-title collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+            <span class="h6 mb-0"><h3>April 23th (Day2) 11:05 ~ 12:30</h3><h5>Graph, Tree and Network Visualization</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-1" style="">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Investigating Visual Perception of Degree Centrality in Graph Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Xin Zhao (Central South University)</li>
+                  <li>Shuowen Fu (Central South University)</li>
+                  <li>Rui Yang (Central South University)</li>
+                  <li>Lei Yang (Central South University)</li>
+                  <li>Yunpeng Chen (Central South University)</li>
+                  <li>Jiang Zhang (Huawei Cloud Computing Technologies Co., Ltd.)</li>
+                  <li>Jiang Long (Huawei Technologies Co. Ltd.)</li>
+                  <li>Fangfang Zhou (Central South University)</li>
+                  <li>Ying Zhao (Central South University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Accelerating Computation of Stable Merge Tree Edit Distances using Parameterized Heuristics</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Florian Wetzels (RPTU Kaiserslautern-Landau)</li>
+                  <li>Heike Leitte (University of Kaiserslautern-Landau)</li>
+                  <li>Christoph Garth (RPTU Kaiserslautern-Landau)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>XGraphRAG: Interactive Visual Analysis for Graph-based Retrieval-Augmented Generation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Ke Wang (Zhejiang University)</li>
+                  <li>Bo Pan (Zhejiang University)</li>
+                  <li>Yingchaojie Feng (Zhejiang University)</li>
+                  <li>Yuwei Wu (Zhejiang University)</li>
+                  <li>Jieyi Chen (Zhejiang University)</li>
+                  <li>Minfeng Zhu (Zhejiang University)</li>
+                  <li>Wei Chen (Zhejiang University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>New Quality Metrics for Connectivity-faithful Sampling and Drawing of Dynamic Graphs</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Amyra Meidiana (University of Sydney)</li>
+                  <li>Seok-Hee Hong (University of Sydney)</li>
+                  <li>Yongcheng Jing (University of Sydney)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Link Prediction Research Based on Visual Analysis: Expansion of the LERTR Index and System Validation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yilei He (University of Electronic Science and Technology of China)</li>
+                  <li>Jiansu Pu (University of Electronic Science and Technology of China)</li>
+                  <li>Yu Zhang (University of Electronic Science and Technology of China)</li>
+                  <li>Hanlin Lan (University of Electronic Science and Technology of China)</li>
+                  <li>Boyang Gao (University of Electronic Science and Technology of China)</li>
+                  <li>Dr. Yanlin Zhu (Chengdu Advanced Metal Materials Industry Technology Research Institute Co., Ltd.)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Accelerating Web-Based Graph Drawing with Bottom-Up GPU Quadtree Construction</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Landon Dyken (University of Illinois Chicago)</li>
+                  <li>Will Usher (Luminary Cloud)</li>
+                  <li>Steve Petruzza (Utah State Unversity)</li>
+                  <li>Stavros Sintos (University of Illinois Chicago)</li>
+                  <li>sidharth kumar (University of Illinois Chicago)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>dcGG, dcRNG: New Degree-Constrained Shape-Based Faithfulness Metrics</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Michael Fang (University of Sydney)</li>
+                  <li>Harshitha Balakumar (University of Sydney)</li>
+                  <li>Seok-Hee Hong (University of Sydney)</li>
+                  <li>Amyra Meidiana (University of Sydney)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" id="Session2">
+          <div data-target="#panel-2" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-2">
+            <span class="h6 mb-0"><h3>April 23th (Day2) 13:50 ~ 15:25</h3><h5>AI and Visual LLM</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-2">
+            <div class="pt-3">
+              <hr>
+              
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>InsightLens: Augmenting LLM-Powered Data Analysis with Interactive Insight Management and Navigation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Luoxuan Weng (Zhejiang University)</li>
+                  <li>Xingbo Wang (Cornell University)</li>
+                  <li>Junyu Lu (Zhejiang University)</li>
+                  <li>Yingchaojie Feng (Zhejiang University )</li>
+                  <li>Yihan Liu (Zhejiang University)</li>
+                  <li>Haozhe Feng (Tencent Inc)</li>
+                  <li>Danqing Huang (Tencent Inc.)</li>
+                  <li>Wei Chen (Zhejiang University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Fen Wang (Zhengzhou University)</li>
+                  <li>Bomiao Wang (Fudan University)</li>
+                  <li>Xueli Shu (Fudan University)</li>
+                  <li>Zhen Liu (Fudan University)</li>
+                  <li>Zekai Shao (Fudan University)</li>
+                  <li>Chao Liu (Fudan University)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>POEM: Interactive Prompt Optimization for Enhancing Multimodal Reasoning of Large Language Models</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Jianben He (The Hong Kong University of Science and Technology)</li>
+                  <li>Xingbo Wang (Cornell University)</li>
+                  <li>Shiyi Liu (Arizona State University)</li>
+                  <li>Guande Wu (New York University)</li>
+                  <li>Claudio Silva (New York University)</li>
+                  <li>Huamin Qu (The Hong Kong University of Science and Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>GeoPet: Interactive Prompt Engineering for Enhancing Tool Calling of Large Language Models in Geospatial Tasks</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Xuan Guo (Zhengzhou University)</li>
+                  <li>Chenchen Gao (Zhengzhou University)</li>
+                  <li>Weifan Niu (Zhengzhou University)</li>
+                  <li>Xinzong Wei (Zhengzhou University)</li>
+                  <li>Chengqi Hua (Zhengzhou University)</li>
+                  <li>ljn guoxuan (Zhengzhou University)</li>
+                  <li>Mingliang Xu (Zhengzhou University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>SmartMLVs: LLM-enabled Multiple Linked Views Generation for Interactive Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Tian Qiu (Fudan University)</li>
+                  <li>Fen Wang (Zhengzhou University)</li>
+                  <li>Shaohua Huang (TongjiUniversity)</li>
+                  <li>Meng Guo (Fudan University)</li>
+                  <li>Yuheng Zhao (Fudan University)</li>
+                  <li>Jincheng Li (Beijing Normal University)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>REMIXTAPE: Enriching Narratives about Metrics with Semantic Alignment and Contextual Recommendation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Matthew Brehmer (University of Waterloo)</li>
+                  <li>Margaret Drouhard (Salesforce)</li>
+                  <li>Arjun Srinivasan (Databricks)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>AutoMA: Automated Generation of Multi-level Annotations for Time Series Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Qi Jiang (Zhejiang University of Technology)</li>
+                  <li>Guodao Sun (Zhejiang University of Technology)</li>
+                  <li>Tong Li (Zhejiang University of Technology)</li>
+                  <li>Jingwei Tang (Zhejiang University of Technology)</li>
+                  <li>Wang Xia (Zhejiang University of Technology)</li>
+                  <li>Yunchao Wang (Zhejiang University of Technology)</li>
+                  <li>Li Jiang (Zhejiang University of Technology)</li>
+                  <li>Ronghua Liang (Zhejiang University of Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>A Reflection on Leveraging Vision Language Model for Visual Analysis in Image-Based Person Re-Identification</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Wang Xia (Zhejiang University of Technology)</li>
+                  <li>Tianci Wang (Zhejiang University of Technology)</li>
+                  <li>Jiawei Li (Xi'an Jiaotong University)</li>
+                  <li>Guodao Sun (Zhejiang University of Technology)</li>
+                  <li>Ronghua Liang (Zhejiang University of Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" id="Session3">
+          <div data-target="#panel-3" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-3">
+            <span class="h6 mb-0"><h3>April 23th (Day2) 16:00 ~ 17:45</h3><h5>Visualization Techniques and Methods</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-3">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Approximate Puzzlepiece Compositing</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Xuan Huang (Scientific Computing and Imaging Institute)</li>
+                  <li>Will Usher (Luminary Cloud)</li>
+                  <li>Valerio Pascucci (University of Utah)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Multi-Criteria Decision Analysis for Aiding Glyph Design</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Hong-Po Hsieh (University of Oxford)</li>
+                  <li>Amy Zavatsky (University of Oxford)</li>
+                  <li>Min Chen (University of Oxford)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>A General Framework for Augmenting Lossy Compressors with Topological Guarantees</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Nathaniel Gorski (University of Utah)</li>
+                  <li>Xin Liang (University of Kentucky)</li>
+                  <li>Hanqi Guo (The Ohio State University)</li>
+                  <li>Lin Yan (Iowa State University)</li>
+                  <li>Bei Wang (University of Utah)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Utilizing Typographic Layout to Faithfully and Metaphorically Visualize One Dimensional Chaos</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Dongyang Wang (Jiangnan University)</li>
+                  <li>Ruimin Lyu (Jiangnan University)</li>
+                  <li>Guoying Yang (Jiangnan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>PartFlow: A Visualization Tool for Application Partitioning and Workload Offloading in Mobile Edge Computing</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Boda Li (University of Washington)</li>
+                  <li>Minghao Li (Nanyang Technological University)</li>
+                  <li>Jian Zhao (University of Waterloo)</li>
+                  <li>Dr. Wei Cai (University of Washington)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>ParkView: Visualizing Monotone Interleavings</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Thijs Beurskens (TU Eindhoven)</li>
+                  <li>Steven van den Broek (TU Eindhoven)</li>
+                  <li>Arjen Simons (Technical University Eindhoven)</li>
+                  <li>Willem Sonke (TU Eindhoven)</li>
+                  <li>Kevin Verbeek (Eindhoven University of Technology)</li>
+                  <li>Tim Ophelders (TU Eindhoven)</li>
+                  <li>Bettina Speckmann (TU Eindhoven)</li>
+                  <li>Michael Hoffmann (ETH Zürich)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>GroupRugs: Visual Summaries for Groups in Collective Movement Data</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Marie Stolk (TU Eindhoven)</li>
+                  <li>Jules Wulms (TU Eindhoven)</li>
+                  <li>Kevin Verbeek (Eindhoven University of Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Navigating Color Constraints in Multi-View Visualizations with MVcolor</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Fu-Yin Cherng (National Chung Cheng University)</li>
+                  <li>YI-CHIEH LEE (National University of Singapore)</li>
+                  <li>Yun-Rou Lin (National Yang Ming Chiao Tung University)</li>
+                  <li>Zhu-Ying Tian (NYCU)</li>
+                  <li>Wen-Chieh Lin (National Yang Ming Chiao Tung University)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="400" id="Session4">
+          <div data-target="#panel-4" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-4">
+            <span class="h6 mb-0"><h3>April 24th (Day3) 9:00 ~ 10:30</h3><h5>Scientific and Biomedical Visualization</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-4">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Explorable INR: An Implicit Neural Representation for Ensemble Simulation Enabling Efficient Spatial and Parameter Exploration</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yi-Tang Chen (The Ohio State University)</li>
+                  <li>Haoyu Li (The Ohio State University)</li>
+                  <li>Neng Shi (The Ohio State University)</li>
+                  <li>Xihaier Luo (Brookhaven National Laboratory)</li>
+                  <li>Wei Xu (Brookhaven National Laboratory)</li>
+                  <li>Han-Wei Shen (The Ohio State University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>SurfPatch: Enabling Patch Matching for Exploratory Stream Surface Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Delin An (University of Notre Dame)</li>
+                  <li>Chaoli Wang (University of Notre Dame)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Cytosplore EvoViewer: Visual Analytics of Conserved Evolutionary Patterns in multi-species single-cell sequencing data</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Soumyadeep Basu (Leiden University Medical Center)</li>
+                  <li>Jeroen Eggermont (Leiden University Medical Center)</li>
+                  <li>Thomas Kroes (Leiden University Medical Center)</li>
+                  <li>Morgan Wirthlin (Allen Institute for Brain Science)</li>
+                  <li>Trygve Bakken (Allen Institute for Brain Science)</li>
+                  <li>Ed Lein (Allen Institute for Brain Science)</li>
+                  <li>Boudewijn Lelieveldt (Leiden University Medical Center)</li>
+                  <li>Thomas Höllt (Delft University of Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>MTvis: Understanding and Optimizing Microbial Time-series Data Augmentation Model via Interactive Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yi Chen (Beijing Technology and Business University)</li>
+                  <li>Yuan Xu (Beijing Technology and Business University)</li>
+                  <li>Xue Liang (Beijing Technology and Business University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Fast Fiber Surface and Fiber Line Extraction for Bivariate Scalar Fields using Dual Bounding Volume Hierarchy Traversal</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Felix Raith (Leipzig University)</li>
+                  <li>Baldwin Nsonga (Leipzig University)</li>
+                  <li>Gerik Scheuermann (Leipzig University)</li>
+                  <li>Christian Heine (Leipzig University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>AMGSRN++: Improved Adaptive SRN for Scientific Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Skylar Wolfgang Wurster (The Ohio State University)</li>
+                  <li>Han-Wei Shen (The Ohio State University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Enabling Fast and Accurate Crowdsourced Annotation for Elevation-Aware Flood Extent Mapping</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Landon Dyken (University of Illinois Chicago)</li>
+                  <li>Saugat Adhikari (Indiana University Bloomington)</li>
+                  <li>Pravin Poudel (Utah State University)</li>
+                  <li>Steve Petruzza (Utah State Unversity)</li>
+                  <li>Da Yan (Indiana University Bloomington)</li>
+                  <li>Will Usher (Luminary Cloud)</li>
+                  <li>sidharth kumar (University of Illinois at Chicago)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" id="Session5">
+          <div data-target="#panel-5" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-5">
+            <span class="h6 mb-0"><h3>April 24th (Day3) 13:50 ~ 15:25</h3><h5>3D and Immersive Visualization</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-5">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>iVR-GS: Inverse Volume Rendering for Explorable Visualization via Editable 3D Gaussian Splatting</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Kaiyuan Tang (University of Notre Dame)</li>
+                  <li>Siyuan Yao (University of Notre Dame)</li>
+                  <li>Chaoli Wang (University of Notre Dame)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>DTBIA: An Immersive Visual Analytics System for Brain-Inspired Research</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Jun-Hsiang Yao (Fudan University)</li>
+                  <li>Mingzheng Li (Fudan University)</li>
+                  <li>Jiayi Liu (Fudan University)</li>
+                  <li>Yuxiao Li (The Ohio State University)</li>
+                  <li>Jielin Feng (Fudan University)</li>
+                  <li>Jun Han (The Hong Kong University of Science and Technology)</li>
+                  <li>Qibao Zheng (Fudan University)</li>
+                  <li>Jianfeng Feng (Fudan University)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Social Media Island: Interactive User Profiling and Information Diffusion Exploration with 3D Visual Metaphors</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Jinjing Jiang (Fudan University)</li>
+                  <li>Yuheng Zhao (Fudan University)</li>
+                  <li>Jun-Hsiang Yao (Fudan University)</li>
+                  <li>Huiting Wang (Fudan University)</li>
+                  <li>Xuexi Wang (Fudan University)</li>
+                  <li>Lana Blue (Northwest University)</li>
+                  <li>Dr. Chen Guo (James Madison University)</li>
+                  <li>Xudong Li (Fudan University)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>SportsBuddy: Designing and Evaluating an AI-Powered Sports Video Storytelling Tool Through Real-World Deployment</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Tica Lin (Harvard University)</li>
+                  <li>Ruxun Xiang (Harvard University)</li>
+                  <li>Gardenia Liu (Harvard University)</li>
+                  <li>Divyanshu Tiwari (University of Minnesota)</li>
+                  <li>Chenjiayi Ye (Harvard University)</li>
+                  <li>Meng-Chia Chiang (Harvard University)</li>
+                  <li>Hanspeter Pfister (Harvard University)</li>
+                  <li>Chen Zhu-Tian (University of Minnesota-Twin Cities)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>ST&sup2;VR: An Interactive Authoring System for SpatioTemporal STorytelling in Virtual Reality with Hierarchical Narrative Structure</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yifei Zhang (Fudan University)</li>
+                  <li>Jingyan Zhang (Dublin City University)</li>
+                  <li>Ziyue Lin (Fudan University)</li>
+                  <li>Lin-Ping Yuan (The Hong Kong University of Science and Technology)</li>
+                  <li>Jun Han (The Hong Kong University of Science and Technology)</li>
+                  <li>Yalong Yang (Georgia Institute of Technology)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>ViSNeRF: Efficient Multidimensional Neural Radiance Field Representation for Visualization Synthesis of Dynamic Volumetric Scenes</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Siyuan Yao (University of Notre Dame)</li>
+                  <li>Yunfei Lu (University of Notre Dame)</li>
+                  <li>Chaoli Wang (University of Notre Dame)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Meta-INR: Efficient Encoding of Volumetric Data via Meta-Learning Implicit Neural Representation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Maizhe Yang (University of Notre Dame)</li>
+                  <li>Kaiyuan Tang (University of Notre Dame)</li>
+                  <li>Chaoli Wang (University of Notre Dame)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Visual Attention Exploration in Vision-Based Mamba Models</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Junpeng Wang (Visa Research)</li>
+                  <li>Chin-Chia Michael Yeh (Visa Research)</li>
+                  <li>Uday Singh Saini (Visa Research)</li>
+                  <li>Mahashweta Das (Visa Research)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="600" id="Session6">
+          <div data-target="#panel-6" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-6">
+            <span class="h6 mb-0"><h3>April 24th (Day3) 16:00 ~ 17:50</h3><h5>Applications</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-6">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>Human-Guided Image Generation for Expanding Small-Scale Training Image Datasets</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Changjian Chen (Hunan University)</li>
+                  <li>Fei Lv (Hunan University)</li>
+                  <li>Yalong Guan (Hunan University)</li>
+                  <li>Pengcheng Wang (Hunan University)</li>
+                  <li>Shengjie Yu (Hunan University)</li>
+                  <li>Yifan Zhang (National University of Singapore)</li>
+                  <li>Zhuo Tang (Hunan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>PrettiSmart: Visual Interpretation of Smart Contracts via Simulation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Xiaolin Wen (Nanyang Technological University)</li>
+                  <li>Tai D. Nguyen (Singapore Management University)</li>
+                  <li>Lun Zhang (GoPlus Security)</li>
+                  <li>Jun Sun (Singapore Management University)</li>
+                  <li>Yong WANG (Nanyang Technological University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>InclusiViz: Visual Analytics of Human Mobility Data for Understanding and Mitigating Urban Segregation</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yue Yu (The Hong Kong University of Science and Technology)</li>
+                  <li>Yifang Wang (Northwestern University)</li>
+                  <li>Yongjun Zhang (Stony Brook University)</li>
+                  <li>Huamin Qu (The Hong Kong University of Science and Technology)</li>
+                  <li>Dongyu Liu (University of California at Davis)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>IntiVisor: A Visual Analytics System for Interaction Log Analysis</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yi Han (National Sun Yat-sen University)</li>
+                  <li>Gregory D. Abowd(Northeastern University)</li>
+                  <li>John Stasko (Georgia Institute of Technology)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Waltzboard: Multi-Criteria Automated Dashboard Design for Exploratory Analysis</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Jiwon Choi (Sungkyunkwan University)</li>
+                  <li>Jaemin Jo (Sungkyunkwan University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Contribution of Data Visualization to Decision-Making: A Classification of Data Visualization Research Based on the Characteristics of Decision Problems</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Midori Sugihara (University of Tsukuba)</li>
+                  <li>Shuhei Takakai (University of Tsukuba)</li>
+                  <li>Kazutaka Takamatsu (University of Tsukuba)</li>
+                  <li>Kazuo Misue (University of Tsukuba)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Visual Analytics of Ball Handlers’ Decisions in Basketball Games</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yihong Wu (Zhejiang University)</li>
+                  <li>Ziao Liu (Zhejiang University)</li>
+                  <li>Liqi Cheng (Zhejiang University)</li>
+                  <li>Moqi He (Zhejiang University)</li>
+                  <li>Dazhen Deng (Zhejiang University)</li>
+                  <li>Xiao Xie (Zhejiang University)</li>
+                  <li>Hui Zhang (Zhejiang University)</li>
+                  <li>Yingcai Wu (Zhejiang University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Evaluating ‘Graphical Perception’ with Multimodal LLMs</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Rami Huu Nguyen (University of Massachusetts Boston)</li>
+                  <li>Kenichi Maeda (University of Massachusetts Boston)</li>
+                  <li>Mahsa Geshvadi (University of Massachusetts Boston)</li>
+                  <li>Daniel Haehn (University of Massachusetts Boston)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-2 card-sm card-body hover-shadow-sm aos-init aos-animate" data-aos="fade-up" data-aos-delay="700" id="Session7">
+          <div data-target="#panel-7" class="accordion-panel-title" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-7">
+            <span class="h6 mb-0"><h3>April 25th (Day4) 9:00 ~ 10:35</h3><h5>Taxonomy, Generative AI and Creative Visualization Tools</h5></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="assets/img/icons/interface/plus.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M19 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z" fill="#212529"></path>
+            <path d="M13 19L13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5L11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" fill="#212529"></path>
+            </svg>
+          </div>
+          <div class="collapse" id="panel-7">
+            <div class="pt-3">
+              <hr>
+
+              <div class="paper tvcg">
+              <p><span class="badge-tvcg">tvcg</span><strong>VisTaxa: Developing a Taxonomy of Historical Visualizations</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Yu Zhang (University of Oxford)</li>
+                  <li>Xinyue Chen (Peking University)</li>
+                  <li>Weili Zheng (Fudan University)</li>
+                  <li>Yuhan Guo (Peking University)</li>
+                  <li>Guozheng Li (Beijing Institute of Technology)</li>
+                  <li>Siming Chen (Fudan University)</li>
+                  <li>Xiaoru Yuan (Peking University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>GenQA : A Method for Generating and Validating Question/Answer Pairs from Journalistic Data Material</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Théo Lecardonnel (Polytechnique Montreal)</li>
+                  <li>Prof Christophe (Université de Toulouse)</li>
+                  <li>Thomas Hurtut (Polytechnique Montreal)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>Visual Text Mining with Progressive Taxonomy Construction for Envionrmental Studies</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Sam Yu-Te Lee (University of California Davis)</li>
+                  <li>Cheng-Wei Hung (National Taiwan University)</li>
+                  <li>Mei-Hua Yuan (Academia Sinica)</li>
+                  <li>Kwan-Liu Ma (University of California at Davis)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>The Joy of Co-Painting: Creative Human-AI Collaboration for Traceable Image-Generation Workflows</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Jena Satkunarajan (Universität Stuttgart)</li>
+                  <li>Steffen Koch (University of Stuttgart)</li>
+                  <li>Kuno Kurzhals (University of Stuttgart)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper conf">
+              <p><span class="badge-conf">conf</span><strong>More Than Beautiful: Exploring Design Features, Practical Perspectives, and Implications of Artistic Data Visualization</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Xingyu Lan (Fudan University)</li>
+                  <li>Yifan Wang (Fudan University)</li>
+                  <li>Lingyu Peng (China University of Science and Technology Beijing)</li>
+                  <li>Xiaofan Ma (Sun Yat-sen University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Seon Gyeom Kim (KAIST)</li>
+                  <li>Jaeyoung Choi (KAIST)</li>
+                  <li>Ryan Rossi (Adobe Research)</li>
+                  <li>Eunyee Koh (Adobe Research)</li>
+                  <li>Tak Yeon Lee (KAIST)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>Automated Pipeline for Detecting and Analyzing Misleading Visual Elements</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>Minhyeong Kim (Seoul National University)</li>
+                  <li>Yumin Song (Seoul National University)</li>
+                  <li>Yungun Kim (Seoul National University)</li>
+                  <li>Aeri Cho (Seoul National University)</li>
+                  <li>Soohyun Lee (Seoul National University)</li>
+                  <li>Hyeon Jeon (Seoul National University)</li>
+                  <li>Prof. Jinwook Seo (Seoul National University)</li>
+                </ul>
+              </div>
+              </div>
+
+              <div class="paper note">
+              <p><span class="badge-note">note</span><strong>MATIC: Multilingual Accurate Textual Image Customization via Joint Generative Artificial Intelligence</strong></p>
+              <div class="d-flex align-items-center my-2">
+                <ul>
+                  <li>CHIAO-HSIN WU (National Taiwan Normal University)</li>
+                  <li>I-WEI LAI (National Taiwan Normal University)</li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="paper tvcg">
           <br>
           <h3>TVCG Journal-Track Papers</h3>
         </div>
@@ -904,7 +1747,7 @@
             <li>Ronghua Liang (Zhejiang University of Technology)</li>
           </ul>
         </div>
-        </div>
+        </div> -->
 
         </div>
         <!-- <div class="row">
