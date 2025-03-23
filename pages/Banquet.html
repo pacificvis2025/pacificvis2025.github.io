@@ -11,6 +11,86 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+    <style>
+      .boxed-text {
+        display: inline-block;
+        /* padding: 0px 2px;  */
+        border: 2px solid black;
+        border-radius: 4px; /* optional: rounded corners */
+        font-size: 16px;
+        background-color: white; /* optional: background */
+      }
+      .bus-icon {
+        width: 6.25%;
+        height: 6.25%;
+      }
+
+      .metro {
+        width: 50%;
+        height: 50%;
+      }
+
+      .label {
+        padding: 2px 4px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .label-money {
+        background-color: #e9690e;
+      }
+
+      .label-purple {
+        background-color: #8a2be2;
+      }
+
+      .label-blue {
+        background-color: #337ab7;
+      }
+
+      .label-red {
+        background-color: #d9534f;
+      }
+
+      .label-brown {
+        background-color: #a16641;
+      }
+
+      .label-green {
+        background-color: #00a651;
+      }
+      .grid-container-reception {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'ieee ieee_cs vgtc';
+        text-align: center;
+        gap: 40px;
+        padding: 10px;
+        place-items: center;
+      }
+      
+      .grid-container-reception > div {
+        padding: 20px 0;
+        font-size: 20px;
+      }
+
+      .bus-icon {
+        width: 6.25%;
+        height: 6.25%;
+      }
+
+      .caesar {
+        width: 16%;
+        height: 16%;
+      }
+
+      html {
+        scroll-padding-top: 100px; /* 根據你的 navbar 高度自行調整 */
+      }
+    </style>
     <!--
     <style>
       .bg-img {
@@ -134,10 +214,86 @@
     <br>
     <div>
       <div class="container">
-        <h3>Banquet</h3>
-        <p>Coming soon!</p>
-        <!-- <p class="lead px-xl-5">The Visual Data Storytelling contest hosts its <a href="change the href here">own website</a> </p> -->
-      </div>
+        <h1 id="Reception1">Banquet</h1>
+        <br>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><b>Restaurant</b></td>
+              <td>China Pa Dining & Live Music</td>
+            </tr>
+            <tr>
+              <td><b>Date</b></td>
+              <td>April 24, 2025 (Thu.)</td>
+            </tr>
+            <tr>
+              <td><b>Address</b></td>
+              <td><p>B1 (Basement floor), No. 285, Section 3, Nanjing E Rd, Songshan District, Taipei City</p>
+              <a href="https://maps.app.goo.gl/9YWCQniLjS9kruRY7" target="_blank">(Google Map)</a>
+              </td>
+            </tr>
+            <tr>
+              <td><b>How to Go?</b></td>
+              <td>
+              <p><b>By MRT (Recommeded):</b>  
+                The Taipei Metro Route Map is available <a href="airportToTaipeiCity.html#taipeiMetroMap">here</a>.
+                <ol>
+                  <li><b>From the Conference Venue to the MRT Station:</b><br>
+                    Walk to <span class="boxed-text">Exit 5</span> of <span class="boxed-text">Chiang Kai-Shek Memorial Hall Station</span>.<br>
+                    <a href="https://www.google.com.tw/maps/dir/25.038421,121.5179865/100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80+%E4%B8%AD%E5%B1%B1%E5%8D%97%E8%B7%AF21-1%E8%99%9F/@25.0368565,121.5172673,18.2z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3442a99e549c2117:0x729eb4255e497d87!2m2!1d121.5171281!2d25.0351385!3e2?hl=zh-TW&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">(See walking route on Google Maps)</a>
+                  </li>
+                  <li>
+                    <b>Boarding the MRT:</b><br>
+                    At Chiang Kai-Shek Memorial Hall Station, take the <span class="label label-green">Green Line</span> train heading toward <span class="boxed-text">"Songshan" direction</span>.<br>
+                    (cost approximately 12 minutes and TWD $20)
+                  </li>
+                  <li>
+                    <b>Arrival at Destination Station:</b><br>
+                      Get off at  <span class="boxed-text">Nanjing Fuxing Station</span>.
+                  </li>
+                  <li>
+                    <b>Exit & Walking Directions to Restaurant:</b><br>
+                    Exit the station via <span class="boxed-text">Exit 6</span>. After reaching ground level, walk straight for about <span class="boxed-text">100 meters (1 minute)</span>.<br>
+                    You will see ChinaPa Restaurant.<br>
+                    <a href="https://www.google.com.tw/maps/dir/25.0519628,121.5448766/%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B5B1%3C%E5%AE%89%E6%B3%B0%E5%A4%A7%E6%A8%93%3E+%E8%BF%91%E5%85%84%E5%BC%9F%E9%A3%AF%E5%BA%97China+Pa+Dining+%26+Live+Music+%E4%B8%AD%E5%9C%8B%E7%88%B6/@25.0519266,121.5452533,20.64z/data=!3m1!5s0x3442abe780d0e8cf:0x9da917194c328ab1!4m9!4m8!1m0!1m5!1m1!1s0x3442ab95790d71a7:0x9b32acf067665b38!2m2!1d121.5459279!2d25.0520451!3e2?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">(See walking route on Google Maps)</a>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Website</b></td>
+              <td><a href="http://www.chinapa.com.tw/index.html" target="_blank">Link</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="grid-container-reception">
+          <img src="assets/img/banquet/ChinaPa1.png">
+          <img src="assets/img/banquet/ChinaPa2.jpg">
+        </div>
+        <br>
+<!--         <p>Date: 2025/04/22(Tue.)，18:30</p>
+        <p>Venue: Checkers (all-you-can-eat Buffet) @ 2F, Cesar Park Taipei</p>
+        <br>
+
+        <h3>Map</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6413425481433!2d121.51637819999999!3d25.0462429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a972f0cbab67%3A0xbbd4deb5ba2c7daf!2zQ2hlY2tlcnMgLSDlh7HmkpLlpKfpo6_lupc!5e0!3m2!1szh-TW!2stw!4v1737460737585!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <div class="caesar"><img src="assets/img/Reception/CaesarPark.png"></div>
+        <p>CAESAR PARK TAIPEI is located in the heart of Taipei City near Taipei Main Station.</p>
+ -->
+<!--         <br>
+        <h3>How to Get There</h3>
+        <div class="bus-icon"><img src="assets/img/VenueInformation/MRT.png"></div>
+        <p><b>MRT</b></p>
+        <p>Directly connected to <u>Exit M6</u> of Taipei Main Station [BL12] [R10].</p>
+        <br>
+
+        <div class="bus-icon"><img src="assets/img/VenueInformation/walk.png"></div>
+        <p><b>WALK</b></p>
+        <p>From conference venue: Walk 10 mins to Checkers.</p> -->
+
+        </div>
     </div>
     <br>
     <br>
