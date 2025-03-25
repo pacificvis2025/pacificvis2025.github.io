@@ -11,6 +11,44 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+    <style>
+      .badge-invited {
+        background-color: rgb(241, 196, 0);
+        color: darkblue;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .badge-full {
+        background-color: rgb(198, 53, 39);
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .badge-short {
+        background-color: rgb(0, 30, 98);
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .hidden {
+        display: none;
+      }
+      html {
+        scroll-padding-top: 100px; /* 根據你的 navbar 高度自行調整 */
+      }
+    </style>
     <!--
     <style>
       .bg-img {
@@ -134,9 +172,72 @@
     <br>
     <div>
       <div class="container">
-        <h1>VisMeetsAI Workshop</h1>
-        <p>Coming soon!</p>
-        <!-- <p class="lead px-xl-5">The Visual Data Storytelling contest hosts its <a href="change the href here">own website</a> </p> -->
+        <h1 id="AIWorkshop1">VisMeetsAI Workshop</h1>
+        <hr>
+        <h3>Coding</h3>
+        <h5><span class="badge-invited">invited</span><strong>Invited talk (60 min)</strong></h5>
+        <h5><span class="badge-full">full</span><strong>Full paper (20 min)</strong></h5>
+        <h5><span class="badge-short">short</span><strong>Short paper (15 min)</strong></h5>
+        <hr>
+
+        <section>
+          <div class="container">
+            <div class="row align-items-center justify-content-around o-hidden" id="Keynote2">
+              <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                <img src="assets/img/VisMeetsAIWorkshop/Yu-ShuenWang.png" alt="Image" class="rounded shadow">
+              </div>
+              <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <h3 class="h2"><span class="badge-invited">invited</span>Yu-Shuen Wang</h3>
+                <h3 class="h5">National Yang Ming Chiao Tung University</h3>
+                <p><b>Title: </b>Sports Data Acquisition, Analysis, and Visualization</p>
+                <p><b>Time: </b>14:00-15:00</p>
+                <p><b>Abstract: </b>This keynote presentation explores the transformative impact of data analytics and visualization on sports, with a focus on basketball and badminton.
+                   The talk will outline innovative methods for collecting and analyzing sports data, and demonstrate how effective visualization can translate complex datasets into actionable insights.
+                    By examining current trends and research developments in sports analytics, the presentation highlights how enhanced data interpretation can drive improvements in coaching strategies, athlete performance, and fan engagement.
+                     Attendees will gain a comprehensive overview of emerging applications in the field and discover opportunities for cross-disciplinary collaboration to further revolutionize sports analysis and decision-making.</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <p><b>Bio: </b>Yu-Shuen Wang is a professor in the Department of Computer Science at National Yang Ming Chiao Tung University.
+                   He earned his Ph.D. from the Visual System Laboratory at National Cheng Kung University, Tainan, Taiwan, in 2010. Currently,
+                    he leads the Computer Graphics and Visualization Lab within the Institute of Multimedia Engineering, where his research focuses on computer graphics, computer vision, data visualization, and machine learning.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-0">
+          <div class="container">
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden" id="Keynote1">
+              <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                <img src="assets/img/VisMeetsAIWorkshop/NiklasElmqvist.jpg" alt="Image" class="rounded shadow">
+              </div>
+              <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <h3 class="h2"><span class="badge-invited">invited</span>Niklas Elmqvist</h3>
+                <h3 class="h5">Aarhus University</h3>
+                <p><b>Title: </b>Automating the Path: An R&D Agenda for Human-Centered AI and Visualization</p>
+                <p><b>Time: </b>16:05-17:05</p>
+                <p><b>Abstract: </b>The emergence of generative AI and foundation models is fundamentally reshaping computer science, and visualization is no exception.
+                   In this talk, I will present a systematic framework for understanding how human-centered AI (HCAI) can transform the visualization discipline.
+                    This framework maps four key HCAI capabilities—amplify, augment, empower, and enhance—onto the four phases of visual sensemaking: view, explore, schematize, and report.
+                     For each combination, I will discuss existing research, envision future possibilities, identify challenges and pitfalls, and examine ethical considerations.
+                      This design space can serve as an R&D agenda for both visualization researchers and practitioners to integrate AI into their work as well as understanding how visualization can support HCAI research.</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-left">
+                <p><b>Bio: </b>Niklas Elmqvist (he/him/his) is a Villum Investigator, a Fellow of the ACM and the IEEE, and a full professor in the Department of Computer Science at Aarhus University in Aarhus, Denmark.
+                   He received his Ph.D. in computer science in 2006 from Chalmers University in Gothenburg, Sweden.
+                    Prior to joining Aarhus, he was faculty at University of Maryland in College Park, MD, USA from 2014 to 2023, and at Purdue University in West Lafayette, IN, USA from 2008 to 2014.
+                     From 2016 to 2021, he served as the director of the Human-Computer Interaction Laboratory (HCIL) at University of Maryland, one of the oldest and most well-known HCI research labs in the country.
+                      His research area is data visualization, human-computer interaction, and visual analytics.
+                       He is the recipient of Villum Investigator and NSF CAREER grants as well as best paper and honorable mention awards from the IEEE Information Visualization conference, the ACM CHI conference, and the ACM DIS conference.
+                        He was papers chair for IEEE InfoVis 2016, 2017, and 2020, subcommittee chair for ACM CHI 2020 and 2021, papers chair for IEEE PacificVis 2024, and overall papers chair for IEEE VIS in 2024 and 2025.
+                         He is also an associate editor for the International Journal of Human-Computer Studies and the Information Visualization journal. In addition, he serves as series editor of the Springer Nature Synthesis Lectures on Visualization.
+                          Finally, he is a member of the ACM SIGCHI Executive Committee as Adjunct Chair for Awards and an elected member of the IEEE VIS Steering Committee, both since 2023.
+                           His research has been funded by both federal agencies such as NSF, NIH, and DHS as well as by companies such as Google, NVIDIA, and Microsoft.
+                            He is the recipient of the Purdue Student Government Graduate Mentoring Award (2014), the Ruth and Joel Spira Outstanding Teacher Award (2012), and the Purdue ECE Chicago Alumni New Faculty award (2010).
+                             He has been a member of the IEEE VGTC Visualization Academy since 2024. He was elevated to ACM Fellow in 2025 and IEEE Fellow in 2024.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <br>
