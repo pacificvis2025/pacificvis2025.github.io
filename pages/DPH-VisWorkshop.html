@@ -11,6 +11,44 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+    <style>
+      .badge-keynote {
+        background-color: rgb(241, 196, 0);
+        color: darkblue;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .badge-full {
+        background-color: rgb(198, 53, 39);
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .badge-short {
+        background-color: rgb(0, 30, 98);
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .hidden {
+        display: none;
+      }
+      html {
+        scroll-padding-top: 100px; /* 根據你的 navbar 高度自行調整 */
+      }
+    </style>
     <!--
     <style>
       .bg-img {
@@ -135,7 +173,154 @@
     <div>
       <div class="container">
         <h1>DPH-Vis Workshop</h1>
-        <p>Coming soon!</p>
+        <hr>
+        <h3>Coding</h3>
+        <h5><span class="badge-keynote">keynote</span><strong>Keynote talk (45 min)</strong></h5>
+        <h5><span class="badge-full">full</span><strong>Full paper (20 min)</strong></h5>
+        <!-- <h5><span class="badge-short">short</span><strong>Short paper (15 min)</strong></h5> -->
+        <hr>
+
+        <!-- <section> -->
+          <div class="container">
+            <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+              <h3 id="DPH1">Session 1 (Chair: Satoshi Tanaka)</h3>
+            </div>
+            <br>
+            <div class="row align-items-center justify-content-around o-hidden">
+              <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                <img src="assets/img/DPHVisWorkshop/ChongkeBi.jpg" alt="Image" class="rounded shadow">
+              </div>
+              <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <h3 class="h2"><span class="badge-keynote">keynote</span>Prof. Chongke Bi</h3>
+                <h3 class="h5">Tianjin University</h3>
+                <p><b>Title: </b>Emotion-Driven Talking Face Generation for Digital Humanities</p>
+                <p><b>Time: </b>09:05-09:50</p>
+                <p><b>Abstract: </b>Emotion-driven talking face generation is a crucial and rapidly developing technology in the field of digital humanities.
+                   For example, it can be used to reconstruct the likeness of historical figures, bringing them “to life” to help people better understand history and culture.
+                    It can even enable historical figures to engage in multilingual communication, promoting cultural exchange on an international level.
+                     Additionally, it can be applied in virtual tour guides, allowing users to customize the likeness of their favorite celebrities as guides.
+                      Emotion-driven talking face generation involves transferring facial motion attributes from audio or video onto any portrait image to generate realistic talking face videos.
+                       In the domain of representation learning,
+                        one of the key challenges for this technology is effectively disentanglement facial expressions and head poses to achieve more natural and precise control in video editing and human-computer interaction.
+                         This talk will introduce our recent work for disentanglement speaking motion representations based on prior knowledge, such as the attention disentanglement model, 3DMM model, and Facial Action Coding System (FACS).
+                          Additionally, the application of generative models like GAN and NeRF in the task of talking face synthesis will also be discussed. Finally, several digital humanities applications will also be shown.</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <p><b>Speaker Bio: </b>Chongke Bi received his BSc (Eng.) and MSc (Eng.) degrees from Shandong University in 2004 and 2007, respectively, and his PhD (Sci.) degree from The University of Tokyo, Japan, in 2012.
+                   From 2012 to 2016, he was a Researcher at RIKEN, Japan, where he focused on the research in the field of visual analysis of large-scale simulation on supercomputer.
+                    He is currently a professor at the college of intelligence and computing, Tianjin University. His research interests include visualization, machine learning, and high performance computing.
+                     He was the Organizing Chair of the 13th and 14th IEEE Pacific Visualization Symposium (IEEE PacificVis 2020 and 2021); the Poster Chair of IEEE PacificVis 2018.
+                      He was also served as the Program Co-chair of the 17th International Symposium on Visual Information Communication and Interaction (VINCI 2024).
+                       He has been the Chair of the International Forum in ChinaVis since 2018; the Chair of CSIG-VIS International Lecture Series since 2021 (https://chinavis.org/lectures/english/index_en.html).</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <h5><span class="badge-full">full</span><strong>Development of a Visual Analytic System for Baum Test Using Psychological Traits Dataset</strong></h5>
+                <p><b>Time: </b>09:50-10:10</p>
+                <div class="d-flex align-items-center my-2">
+                  <ul>
+                    <li>Mikihiro Komoto (Kobe University)</li>
+                    <li>Kaho Takenouchi (Kobe University)</li>
+                    <li>Naohisa Sakamoto (Kobe University)</li>
+                    <li>Chieko Kato (Toyo University)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <h5><span class="badge-full">full</span><strong>A Study on Frame Rhythm Analysis of Character Motions in Anime Cels</strong></h5>
+                <p><b>Time: </b>10:10-10:30</p>
+                <div class="d-flex align-items-center my-2">
+                  <ul>
+                    <li>Ryota Murata (Ritsumeikan University)</li>
+                    <li>Ryosuke Yamanishi (Kansai University)</li>
+                    <li>Susumu Nakata (Ritsumeikan University)</li>
+                    <li>Naohisa Sakamoto (Kobe University)</li>
+                    <li>Jorji Nonaka (RIKEN Center for Computational Science)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <hr>
+                <h5>Coffee break</h5>
+                <p><b>Time: </b>10:30-11:00</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        <!-- </section> -->
+        <!-- <section class="pt-0"> -->
+          <div class="container">
+            <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-left">
+              <h3 id="DPH2">Session 2 (Chair: Soumya Dutta)</h3>
+            </div>
+            <br>
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden">
+              <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                <img src="assets/img/DPHVisWorkshop/LiangLi.png" alt="Image" class="rounded shadow" style="width: 70%;">
+                <br>
+                <br>
+                <img src="assets/img/DPHVisWorkshop/SatoshiTanaka.png" alt="Image" class="rounded shadow" style="width: 70%;">
+              </div>
+              <div class="col-lg-5 col-md-6" data-aos="fade-right">
+                <h3 class="h2"><span class="badge-keynote">keynote</span>Prof. Liang Li &amp; Prof. Satoshi Tanaka</h3>
+                <h3 class="h5">Ritsumeikan University</h3>
+                <p><b>Title: </b>High-Visibility Edge-Highlighting Visualization of Large-Scale 3D-Scanned Point Clouds of Cultural Heritage Objects</p>
+                <p><b>Time: </b>11:00-11:45</p>
+                <p><b>Abstract: </b>The theme of this keynote talk is the visualization of 3D scanned data; a new type of big data produced by modern 3D scanning technology.
+                   Recent advances in 3D scanning have made it easier to conduct 3D scans of large-scale cultural heritage objects.
+                    The data obtained from these scans result in large-scale point cloud datasets consisting of hundreds of millions of 3D points or even more.
+                     In this talk, we will introduce the theory and practice of our method, “dual 3D-edge extraction,” which efficiently and comprehensively extracts 3D edge information from large-scale point cloud data of cultural heritage objects,
+                      enabling high-visibility visualization of the complex 3D structures of scanned objects.
+                       Our method allows for the accurate extraction and visualization of not only sharp edges but also the soft edges (rounded edges) that are abundant in real cultural heritage objects.
+                        Furthermore, the synergy between sharp and soft edges enables halo effects that significantly enhance depth perception.
+                         We will present examples of visualizations of highly valuable cultural heritage objects, including the Borobudur Temple (Indonesia), a UNESCO World Heritage site, the festival floats of the Gion Festival (Kyoto, Japan),
+                          one of the three largest traditional festivals in Japan, and many others.</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-left">
+                <p><b>Speaker Bio 1: Prof. Liang Li</b></p>
+                <p>Liang Li received his M.Eng. and Dr.Eng. degrees from Hiroshima University in 2008 and 2011, respectively.
+                   He is currently a Professor at the College of Information Science and Engineering at Ritsumeikan University, Japan, where he also serves as the Vice Director of the Ritsumeikan International IT Education Promotion Office.
+                    He is an executive board member of the Japan Society of Simulation Technology and a council member of the ASIASIM Federation.
+                     His primary research interests include visual information processing, visualization, virtual reality, and the application of these technologies in digital humanities.
+                      His work in the visualization of cultural heritage has earned numerous recognitions, including multiple Best Paper Awards at international conferences and Gold Awards in art competitions.
+                       His research has been featured by major media outlets such as NHK, Yomiuri Shimbun, and Kyoto Shimbun.</p>
+                
+                <p><b>Speaker Bio 2: Prof. Satoshi Tanaka</b></p>
+                <p>Prof. Satoshi Tanaka received his Ph.D. in theoretical physics from Waseda University, Japan, in 1987.
+                   After serving as an assistant professor, senior lecturer, and associate professor at both Waseda University and Fukui University, he became a professor at Ritsumeikan University in 2002.
+                    His current research focuses on the computer visualization of complex 3D shapes, such as 3D-scanned cultural heritage objects, internal structures of the human body, and fluid simulation results.
+                     He has held influential positions, including vice president of the Visualization Society of Japan (VSJ), president of the Japan Society for Simulation Technology (JSST), and president of ASIASIM (Federation of Asia Simulation Societies).
+                      Currently, he is a cooperating member of the Japan Science Council. Regarding PacificVis, he served as the local organizing chair for the first conference, PacificVis 2008 (Kyoto),
+                       and later as the poster chair for PacificVis 2014 (Yokohama).
+                        He has received best paper awards at the Asia Simulation Conferences (2012 and 2022), the Journal of Advanced Simulation in Science and Engineering in 2014, among others.
+                         His recent work on the precise visualization of 3D-scanned data of cultural heritage objects has received international acclaim, leading to numerous invitations for keynote and invited talks at international conferences,
+                          including Cyberworlds 2019 (11 in total from 2015-2023).</p>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <h5><span class="badge-full">full</span><strong>Identification of Leading Lines in Artworks Based on Topological Analysis of Saliency Maps</strong></h5>
+                <p><b>Time: </b>11:45-12:05</p>
+                <div class="d-flex align-items-center my-2">
+                  <ul>
+                    <li>Fuminori Shibasaki (Keio University)</li>
+                    <li>Prof. Issei Fujishiro (Keio University)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-11 col-md-11 mt-3" data-aos="fade-right">
+                <h5><span class="badge-full">full</span><strong>Transparent Visualization with Dynamic Shading for 3D Scanned Point Clouds of Cultural Heritage Objects</strong></h5>
+                <p><b>Time: </b>12:05-12:25</p>
+                <div class="d-flex align-items-center my-2">
+                  <ul>
+                    <li>Hatsuki Nojiri (Ritsumeikan University)</li>
+                    <li>Satoshi Takatori (Ritsumeikan University)</li>
+                    <li>Kyoko Hasegawa (Tokai University)</li>
+                    <li>Liang Li (Ritsumeikan University)</li>
+                    <li>Michael Feener (Kyoto University)</li>
+                    <li>Satoshi Tanaka (Ritsumeikan University)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         <!-- <p class="lead px-xl-5">The Visual Data Storytelling contest hosts its <a href="change the href here">own website</a> </p> -->
       </div>
     </div>
