@@ -1,0 +1,1645 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IEEE PacificVis 2025 - Accommodations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to IEEE Pacificvis Conference 2025">
+    <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="assets/img/Icon.png" />
+    <style>
+      .grid-container-reception {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'ieee ieee_cs vgtc';
+        text-align: center;
+        gap: 40px;
+        padding: 10px;
+        place-items: center;
+      }
+      
+      .grid-container-reception > div {
+        padding: 20px 0;
+        font-size: 20px;
+      }
+
+      .bus-icon {
+        width: 6.25%;
+        height: 6.25%;
+      }
+    </style>
+    <!--
+    <style>
+      .bg-img {
+        
+        background-image: url('assets/img/Visual_72dpi.png'); /* 背景图片路径 */
+        background-attachment: fixed;
+        -moz-background-size: cover;
+        background-size: cover; /* 确保图片覆盖整个容器 */
+        background-position: relative; /* 图片居中 */
+        background-repeat: no-repeat; /* 防止图片重复 */
+        width: 100%; /* 容器宽度 */
+        height: 70vh; /* 容器高度，100vh 表示视口高度 */
+      }
+    </style>
+    -->
+  </head>
+
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain attribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".dropdown-toggle").forEach(function (dropdown) {
+            dropdown.addEventListener("click", function (event) {
+                let dropdownMenu = this.nextElementSibling;
+
+                // 只有當該選項有子選單時才觸發 dropdown
+                if (dropdownMenu && dropdownMenu.classList.contains("dropdown-menu")) {
+                    event.preventDefault(); // 阻止預設行為，避免頁面跳轉
+                    
+                    // 移除所有其他開啟的 dropdown
+                    document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+                    
+                    // 切換當前 dropdown
+                    dropdownMenu.classList.toggle("show");
+                }
+            });
+        });
+
+        // 點擊其他地方時關閉所有 dropdown
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".dropdown")) {
+                document.querySelectorAll(".dropdown-menu.show").forEach(menu => menu.classList.remove("show"));
+            }
+        });
+    });
+  </script>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+
+    <div w3-include-html="menuNavBar.html"></div> 
+    
+
+    <section class="bg-primary-3 header-inner p-0 jarallax position-relative o-hidden" data-overlay>
+      <!-- <img class ="backgroundimg" src="assets/img/Shidabainian.jpg" alt="SHIDABAINIAN"> -->
+      <div class="bg-img">
+        <center><img class ="backgroundimg" src="assets/img/Visual_72dpi.png" alt="NTNU" style="width:100%;height:auto;"></center>
+        <!-- <div class="row my-3 text-light">
+          <div class="col">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#">Elements</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Avatars</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row my-4 my-md-6 text-light" data-aos="fade-up">
+          <div class="col-lg-9 col-xl-6">
+            <h1 class="display-4">Avatars</h1>
+            <p class="lead mb-0">A set of CSS utility classes to format single avatars and overlapping groups of avatars.</p>
+          </div>
+        </div>
+        <div class="alert alert-primary mb-5">
+          <div class="d-flex">
+            <img class="icon bg-primary" src="assets/img/icons/theme/files/selected-file.svg" alt="selected-file icon" data-inject-svg />
+            <div class="ml-2 flex-grow-1">
+              This page demonstrates Avatars functionality, <a target="_blank" href="documentation/css-avatars.html">See Documentation</a> for a detailed technical explanation.
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div class="decoration right middle-y scale-4">
+        <img class="bg-primary" src="assets/img/decorations/deco-blob-3.svg" alt="deco-blob-3 decoration" data-inject-svg />
+      </div> -->
+    </section>
+    <br>
+    <br>
+    <div>
+      <div class="container">
+        <h1>Food and Shopping</h1>
+        <br>
+        
+
+      <div id="foodAndShopping">
+        <div class="hotel-block" data-price="TWD$300 ~ TWD$500" data-distance="13" data-star="4">
+          <h3>春水堂(Chun Shui Tang)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/ChunShuiTang1.png">
+            <img src="assets/img/FoodAndShopping/ChunShuiTang2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Bubble tea, Taiwanese food</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$300 ~ TWD$500</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/4ZAeVVTU1ttG3B1p9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Chun Shui Tang is the birthplace of bubble tea, blending traditional Taiwanese tea culture with innovative flavors.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>金峰滷肉飯(Jin Feng Braised Pork Rice)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Jin Feng Braised Pork Rice1.jpg">
+            <img src="assets/img/FoodAndShopping/Jin Feng Braised Pork Rice2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese food</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/G6X4iUbCF41a2nB47" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Jin Feng Braised Pork Rice in Taiwan is famous for its deliciously tender pork belly served over fragrant rice, making it a beloved comfort food staple that represents local cuisine.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$300 ~ TWD$500" data-distance="13" data-star="4">
+          <h3>大撰生猛活海鲜</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Dajuan1.jpg">
+            <img src="assets/img/FoodAndShopping/Dajuan2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Stir-fried food restaurant, Taiwanese food </td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$300 ~ TWD$500</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/hBNTb12bQBf92bZK9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Taiwanese hot stir-fry restaurants are great for late-night meals and social gatherings, offering a lively and relaxed atmosphere.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$200 ~ TWD$500" data-distance="13" data-star="4">
+          <h3>雙月食品社(Moon Moon Food)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Moonfood1.png">
+            <img src="assets/img/FoodAndShopping/Moodfood2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Herbal chicken soup, Taiwanese food</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$200 ~ TWD$500</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/XXPbZ9CjRqdZ4EYm9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>The restaurant specializes in nourishing soups and rice dishes that blend traditional Chinese medicine with Taiwanese cooking.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>阜航豆漿(Fu Hang Soybean Milk)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/FuHang1.png">
+            <img src="assets/img/FoodAndShopping/FuHang2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Traditional Taiwanese breakfast</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/UPFcpXo1ARdyUj9eA" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>It's especially popular for its freshly made soy milk, crispy shao bing (baked flatbread), and egg-filled sandwiches.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>鬍鬚張魯肉飯(Formosa Chang)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Formosa1.jpg">
+            <img src="assets/img/FoodAndShopping/Formosa2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Minced pork stew with rice, Taiwanese food</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/1pY9D5U94mpTTySK9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Formosa Chang is a well-known Taiwanese food chain famous for its braised pork rice.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>白水豆花(Bai-Shui Douhua)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Baishui1.png">
+            <img src="assets/img/FoodAndShopping/Baishui2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Tofu pudding, Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/KnVCz8gZsswuViMq9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Their tofu pudding is light, smooth, and served with sweet toppings like syrup, peanuts, or tapioca pearls.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$50 ~ TWD$100" data-distance="13" data-star="4">
+          <h3>南門市場傳統豆花</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/dohua1.jpeg">
+            <img src="assets/img/FoodAndShopping/dohua2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Venue Region</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Tofu pudding, Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$50 ~ TWD$100</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/zaR2rVysKu84pyGF9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>A popular dessert made from silky soft tofu topped with sweet syrup, peanuts, or other toppings, offering a unique and refreshing treat perfect for any time of day.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>Gift shops</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Giftshop1.jpg.webp">
+            <img src="assets/img/FoodAndShopping/Giftshop2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Souvenir</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/5T1pPYVULMHTZydt6" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>The gift shops on the first floor of Taipei Main Station offer a variety of local souvenirs, snacks, and travel essentials.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$200 ~ TWD$500" data-distance="13" data-star="4">
+          <h3>人从众厚切牛排館</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Ren1.jpg">
+            <img src="assets/img/FoodAndShopping/Ren2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese style steak house</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$200 ~ TWD$500</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/vYdKyhrka7ftUkTK7" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>This steakhouse stands out for its hearty portions of premium thick-cut steaks, fast service, affordable prices, and a vibrant, always-busy atmosphere that reflects its wide popularity among locals.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$300" data-distance="13" data-star="4">
+          <h3>清真黃牛肉麵館</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/beefnoodle1.jpg">
+            <img src="assets/img/FoodAndShopping/beefnoodle2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Beef noodle soup, Taiwanese food</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$300</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/sJK31uXewZLF5Pjo8" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Taiwanese beef noodle soup is a hearty bowl of noodles with tender beef and rich, savory broth.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$400 ~ TWD$600" data-distance="13" data-star="4">
+          <h3>真珠-台灣佳味(Jin-Zhu)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Jin1.jpeg">
+            <img src="assets/img/FoodAndShopping/Jin2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$400 ~ TWD$600</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/nUuat5tucaPpR8vr5" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Jin-Zhu is known for its fresh seafood, vibrant flavors, and artistic presentation that reflects the island's rich cultural heritage.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$30 ~ TWD$100" data-distance="13" data-star="4">
+          <h3>50嵐(Wushiland Boba)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/50lan1.jpg">
+            <img src="assets/img/FoodAndShopping/50lan2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Bubble tea</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$30 ~ TWD$100</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/mnudm4irCa9RJBmt7" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>The boba has a sticky and chewy texture, and when paired with milk tea, it tastes great!</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$30 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>天仁茗茶(Ten Ren's TEA)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/ten1.jpg">
+            <img src="assets/img/FoodAndShopping/ten2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Bubble tea</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$30 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/zs3Dj82iZRdiZSNH9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Ten Ren's TEA provides a friendly environment for tourists where you can eat delicious food, drink good tea, and buy tasteful souvenirs.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$600" data-distance="13" data-star="4">
+          <h3>天仁喫茶趣(Chat For Tea)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Chat1.jpeg">
+            <img src="assets/img/FoodAndShopping/Chat2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$600</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/6JZ2V4mxQAuTzmJF9" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Chat For Tea is a popular Taiwanese tea shop known for its high-quality traditional teas and modern bubble tea drinks.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$30 ~ TWD$600" data-distance="13" data-star="4">
+          <h3>微風台北車站(Breeze Taipei Station)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Breeze1.jpg.webp">
+            <img src="assets/img/FoodAndShopping/Breeze2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Food Court</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$30 ~ TWD$600</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E5%BE%AE%E9%A2%A8%E5%8F%B0%E5%8C%97%E8%BB%8A%E7%AB%99/@25.0478356,121.5137874,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a96d81d130e9:0x6117b31db9ebb9c1!8m2!3d25.0478356!4d121.5163623!16s%2Fg%2F11b6vg3ly3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Breeze Taipei Station is a vibrant shopping and dining complex located inside Taipei Main Station, offering travelers a convenient place to eat, shop, and relax.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$50 ~ TWD$400" data-distance="13" data-star="4">
+          <h3>小南門點心世界</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Nan1.webp">
+            <img src="assets/img/FoodAndShopping/Nan2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese Traditional Food & Tofu Pudding</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$50 ~ TWD$400</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E5%B0%8F%E5%8D%97%E9%96%80%E9%BB%9E%E5%BF%83%E4%B8%96%E7%95%8C/@25.0479417,121.5171139,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a9727e338539:0x660aa0c93f52cb57!8m2!3d25.0479417!4d121.5171139!16s%2Fg%2F1tqpwytr?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>A well-known Taiwanese restaurant offering a wide variety of traditional dim sum and local delicacies in a casual, family-friendly setting.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>龍都酒樓</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Dragon1.jpg">
+            <img src="assets/img/FoodAndShopping/Dragon2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Cantonese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/TrN4qEsaAZFvYX389" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Dragon Restaurant is a renowned Cantonese eatery in Taipei, famous for its authentic roast duck and classic dim sum dishes served in an elegant setting.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>大三元酒樓</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Coin1.png">
+            <img src="assets/img/FoodAndShopping/Coin2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Cantonese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/m8ZzHujhKedMgexZ6 " target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Three Coins Restaurant is a prestigious Michelin-starred Cantonese restaurant in Taipei, celebrated for its exquisite dim sum and refined Chinese cuisine.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$500 ~ TWD$5000" data-distance="13" data-star="4">
+          <h3>君品酒店 - 頤宮中餐廳( Le Palais)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Le1.jpg">
+            <img src="assets/img/FoodAndShopping/Le2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei Main Station</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Cantonese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$500 ~ TWD$5000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/a41SSJC4oydY71Vz8" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Le Palais is a prestigious three-Michelin-starred restaurant in Taipei, renowned for its luxurious Cantonese cuisine and exceptional fine dining experience.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$400 ~ TWD$800" data-distance="13" data-star="4">
+          <h3>鼎泰豐101店(Din Tai Fung101)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Din1.jpg">
+            <img src="assets/img/FoodAndShopping/Din2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei 101(Xinyi District)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese/Shanghainese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$400 ~ TWD$800</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/u3y5g33vUkhzv3497" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Din Tai Fung is a world-famous Taiwanese restaurant celebrated for its expertly crafted xiao long bao (soup dumplings) and refined Shanghainese cuisine.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$2000 ~ TWD$5000" data-distance="13" data-star="4">
+          <h3>饗 A Joy</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Joy1.jpg">
+            <img src="assets/img/FoodAndShopping/Joy2.jpeg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei 101(Xinyi District)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>International cuisine buffet</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$2000 ~ TWD$5000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E9%A5%97+A+Joy/@25.033976,121.5645389,17z/data=!3m1!4b1!4m6!3m5!1s0x3442ab76bfde0c6f:0x72123dba7c3b1162!8m2!3d25.033976!4d121.5645389!16s%2Fg%2F11kqy1yplg?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>A Joy by Feast is a stylish buffet restaurant in Taipei, offering a diverse selection of international cuisines in a modern and vibrant setting.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>欣葉台菜 信義新天地A9店</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Shin1.webp">
+            <img src="assets/img/FoodAndShopping/Shin2.webp">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei 101(Xinyi District)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E6%AC%A3%E8%91%89%E5%8F%B0%E8%8F%9C+%E4%BF%A1%E7%BE%A9%E6%96%B0%E5%A4%A9%E5%9C%B0A9%E5%BA%97/@25.0366706,121.5667018,17z/data=!3m1!4b1!4m6!3m5!1s0x3442abb0a47226ad:0xa3c29da266aed574!8m2!3d25.0366706!4d121.5667018!16s%2Fg%2F1twyx6v2?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Shin Yeh Taiwanese Cuisine is a beloved restaurant in Taipei known for serving authentic and refined Taiwanese dishes that celebrate local flavors and traditions.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>富錦樹台菜香檳101旗艦店</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Fu1.webp">
+            <img src="assets/img/FoodAndShopping/Fu2.webp">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei 101(Xinyi District)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E5%AF%8C%E9%8C%A6%E6%A8%B9%E5%8F%B0%E8%8F%9C%E9%A6%99%E6%AA%B3101%E6%97%97%E8%89%A6%E5%BA%97/@25.034231,121.5647949,17z/data=!3m1!4b1!4m6!3m5!1s0x3442ab005882b531:0x223420959513f28f!8m2!3d25.034231!4d121.5647949!16s%2Fg%2F11vsnwrqw7?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Fujin Tree Taiwanese Cuisine & Champagne is a chic and modern restaurant in Taipei that pairs elegant Taiwanese dishes with a curated selection of fine champagnes.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$500" data-distance="13" data-star="4">
+          <h3>微熱山丘 台北101購物中心To Go專櫃</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Sunny1.webp">
+            <img src="assets/img/FoodAndShopping/Sunny2.webp">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Taipei 101(Xinyi District)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Souvenir</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$500</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/zRmGVUt8BTpuA1bH7 " target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>SunnyHills is a popular Taiwanese brand known for its handcrafted pineapple cakes made with natural ingredients and a commitment to traditional baking methods.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$400 ~ TWD$800" data-distance="13" data-star="4">
+          <h3>鼎泰豐新生店(Din Tai Fung)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/sheng1.jpg">
+            <img src="assets/img/FoodAndShopping/sheng2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Yongkang Street</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese/Shanghainese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$400 ~ TWD$800</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/nenYw449hGheGRff8" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Din Tai Fung Xinsheng Branch offers a modern twist on the world-renowned Taiwanese dining experience, serving expertly crafted xiaolongbao and other delicacies in a sleek and inviting setting.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$200 ~ TWD$300" data-distance="13" data-star="4">
+          <h3>思慕昔本館(Smoothie House)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/smoothie1.webp">
+            <img src="assets/img/FoodAndShopping/smoothie2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Yongkang Street</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Snowflake ice, Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$200 ~ TWD$300</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/hYDEoWwFQXGSpzz76" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Smoothie House serves refreshing Taiwanese shaved snow ice topped with fresh fruit and sweet delights, perfect for cooling down on a sunny day.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$400 ~ TWD$600" data-distance="13" data-star="4">
+          <h3>喫飯食堂</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/chi1.jpg">
+            <img src="assets/img/FoodAndShopping/chi2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Yongkang Street</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$400 ~ TWD$600</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E5%96%AB%E9%A3%AF%E9%A3%9F%E5%A0%82/@25.032338,121.529477,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a98c3c0bbabf:0xed99b522af7ba8ce!8m2!3d25.032338!4d121.529477!16s%2Fg%2F1thwy46q?entry=ttu&g_ep=EgoyMDI1MDQxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Chifanshitang offers hearty, home-style Taiwanese meals in a cozy setting that feels just like mom’s kitchen.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$85 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>白水豆花(Bai-Shui Douhua)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/hua1.jpg">
+            <img src="assets/img/FoodAndShopping/hua2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Yongkang Street</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Tofu pudding, Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$85 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E7%99%BD%E6%B0%B4%E8%B1%86%E8%8A%B1+%E5%8F%B0%E5%8C%97%E6%B0%B8%E5%BA%B7%E6%97%97%E8%89%A6%E5%BA%97/@25.0300494,121.5294681,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a9205b3d38d5:0x1bef0dbcd7eeb2c8!8m2!3d25.0300494!4d121.5294681!16s%2Fg%2F11h7nb539c?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Their tofu pudding is light, smooth, and served with sweet toppings like syrup, peanuts, or tapioca pearls.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$200" data-distance="13" data-star="4">
+          <h3>甜滿(L'Atelier Lotus)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/la1.jpg">
+            <img src="assets/img/FoodAndShopping/la2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Yongkang Street</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E7%94%9C%E6%BB%BF/@25.0313393,121.5299031,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a9ad7304b68d:0xe7412d461edbcbb8!8m2!3d25.0313393!4d121.5299031!16s%2Fg%2F11f5tv2s7s?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>A cookie sandwich with nougat filling is a delicious treat made by layering rich, chewy nougat between two crispy cookies, combining crunch and sweetness in every bite.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$65 ~ TWD$80" data-distance="13" data-star="4">
+          <h3>阿宗麵線(Ay-Chung Flour-Rice Noodle)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Ay1.webp">
+            <img src="assets/img/FoodAndShopping/Ay2.webp">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Ximen</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$65 ~ TWD$80</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E9%98%BF%E5%AE%97%E9%BA%B5%E7%B7%9A/@25.0432921,121.5077098,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a90968b57c41:0xb19c4276746146ed!8m2!3d25.0432921!4d121.5077098!16s%2Fg%2F11bwhb3mmk?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Ah-Chung  Flour-Rice Noodle is a beloved Taiwanese street food known for its flavorful, thick vermicelli noodles served in a savory broth with tender braised intestines.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$50 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>2派克脆皮雞排(2 Pike Crispy Chicken)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Pike1.jpg">
+            <img src="assets/img/FoodAndShopping/Pike2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Ximen</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$50 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/2%E6%B4%BE%E5%85%8B%E8%84%86%E7%9A%AE%E9%9B%9E%E6%8E%92+%E8%A5%BF%E9%96%80%E6%A6%82%E5%BF%B5%E5%BA%97/@25.0437159,121.508318,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a9191f852171:0xf98eb330be89fd98!8m2!3d25.0437159!4d121.508318!16s%2Fg%2F11pwysww9w?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>2 Pike Crispy Chicken is a popular Taiwanese snack known for its extra-large, juicy chicken breast coated in a perfectly seasoned, ultra-crispy crust.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$50 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>天天利美食坊(Tian Tian Li)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Tien1.jpg">
+            <img src="assets/img/FoodAndShopping/Tien2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Ximen</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$50 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/F7BPFurm18TULqEh8" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Tian Tian Li is a famous Taiwanese eatery known for its delicious traditional dishes like braised pork rice and pan-fried radish cake, loved by locals and tourists alike.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$100 ~ TWD$1000" data-distance="13" data-star="4">
+          <h3>鼎王麻辣鍋(Tripodking)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/king1.jpg">
+            <img src="assets/img/FoodAndShopping/king2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Ximen</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$100 ~ TWD$1000</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://maps.app.goo.gl/ThukAKtcVCJiWKCK6 " target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Tripodking Spicy Hot Pot is a renowned Taiwanese restaurant celebrated for its rich, aromatic broth and bold, mouth-numbing flavors that define authentic Sichuan-style hot pot.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$200 ~ TWD$400" data-distance="13" data-star="4">
+          <h3>老天祿滷味(Lau Tian Lu)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/lau1.jpeg">
+            <img src="assets/img/FoodAndShopping/lau2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Ximen</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese cuisine</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$200 ~ TWD$400</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E8%80%81%E5%A4%A9%E7%A5%BF%E6%BB%B7%E5%91%B3/@25.0447183,121.5046479,17z/data=!3m2!4b1!5s0x3442a9094c09d5c3:0xe29d75a8c700c49f!4m6!3m5!1s0x3442a909aae93add:0xafccbaa070b53c13!8m2!3d25.0447183!4d121.5072228!16s%2Fg%2F113f8jwjl?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Lau Tian Lu is a legendary Taiwanese shop famous for its flavorful braised delicacies, offering a rich variety of marinated meats and snacks slow-cooked in a secret herbal soy sauce.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+  
+      <div class="hotel-block" data-price="TWD$40 ~ TWD$200" data-distance="13" data-star="4">
+          <h3>佳德鳳梨酥(Chia Te)</h3>
+          <div class="grid-container-reception">
+            <img src="assets/img/FoodAndShopping/Chia1.jpg">
+            <img src="assets/img/FoodAndShopping/Chia2.jpg">
+          </div>
+          <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Region</b></td>
+                <td>Nanjing Sanmin Station (南京三民站)</td>
+              </tr>
+              <tr>
+                <td><b>Type</b></td>
+                <td>Taiwanese dessert</td>
+              </tr>
+              <tr>
+                <td><b>Price</b></td>
+                <td>TWD$40 ~ TWD$200</td>
+              </tr>
+              <tr>
+                <td><b>How to go?</b></td>
+                <td><a href="https://www.google.com/maps/place/%E4%BD%B3%E5%BE%B7%E9%B3%B3%E6%A2%A8%E9%85%A5/@25.0512434,121.5614407,17z/data=!3m1!4b1!4m6!3m5!1s0x3442ab94e6c63c77:0xb57fea257fc2bff2!8m2!3d25.0512434!4d121.5614407!16s%2Fg%2F1w0p3bbk?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">Google Map</a></td>
+              </tr>
+              <tr>
+                <td><b>Comment</b></td>
+                <td>Chia Te Pineapple Cake is a famous Taiwanese pastry known for its buttery crust and rich, tangy pineapple filling.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      
+
+
+
+      </div>
+        
+        
+        </div>
+        <!-- <div class="row">
+          <div class="col-lg-8">
+            <h2>Basic Example</h2>
+            <img src="assets/img/avatars/female-4.jpg" alt="Avatar" class="avatar">
+          </div>
+        </div> -->
+    </div>
+    <br><br>
+    
+    <footer class="pb-4 bg-primary-3" id="footer">
+      <div class="container">
+        <!-- <div class="row mb-5">
+          <div class="col">
+            <div class="card card-body border-0 o-hidden mb-0 bg-primary text-light">
+              <div class="position-relative d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="h3 text-center mb-md-0">Start building beautiful websites</div>
+                <a href="#" class="btn btn-lg btn-white">
+      Purchase Now
+    </a>
+              </div>
+              <div class="decoration layer-0">
+                <img class="bg-primary-2" src="assets/img/decorations/deco-blob-1.svg" alt="deco-blob-1 decoration" data-inject-svg />
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+        <!-- <div class="row mb-5">
+          <div class="col-6 col-lg-3 col-xl-2">
+            <h5>Navigate</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Demos</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Elements</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3 d-flex">
+                <img class="icon" src="assets/img/icons/theme/map/marker-1.svg" alt="marker-1 icon" data-inject-svg />
+                <div class="ml-3">
+                  <span>348 Greenpoint Avenue
+                    <br />Brooklyn, NY</span>
+                </div>
+              </li>
+              <li class="mb-3 d-flex">
+                <img class="icon" src="assets/img/icons/theme/communication/call-1.svg" alt="call-1 icon" data-inject-svg />
+                <div class="ml-3">
+                  <span>+61 3928 3324</span>
+                  <span class="d-block text-muted text-small">Mon - Fri 9am - 5pm</span>
+                </div>
+              </li>
+              <li class="mb-3 d-flex">
+                <img class="icon" src="assets/img/icons/theme/communication/mail.svg" alt="mail icon" data-inject-svg />
+                <div class="ml-3">
+                  <a href="#">hello@company.io</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
+            <h5>Subscribe</h5>
+            <p>The latest Leap news, articles, and resources, sent straight to your inbox every month.</p>
+            <form action="/forms/mailchimp.php" data-form-email novalidate>
+              <div class="form-row">
+                <div class="col-12">
+                  <input type="email" class="form-control mb-2" placeholder="Email Address" name="email" required>
+                </div>
+                <div class="col-12">
+                  <div class="d-none alert alert-success" role="alert" data-success-message>
+                    Thanks, a member of our team will be in touch shortly.
+                  </div>
+                  <div class="d-none alert alert-danger" role="alert" data-error-message>
+                    Please fill all fields correctly.
+                  </div>
+                  <div data-recaptcha data-sitekey="INSERT_YOUR_RECAPTCHA_V2_SITEKEY_HERE" data-size="invisible" data-badge="bottomleft">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">
+                    <img class="icon" src="assets/img/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />
+                    <span>Subscribe</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <small class="text-muted form-text">We’ll never share your details. See our <a href="#">Privacy Policy</a>
+            </small>
+
+          </div>
+        </div> -->
+        <!-- <div class="row justify-content-center mb-2">
+          <div class="col-auto">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img class="icon " src="assets/img/icons/social/instagram.svg" alt="instagram social icon" data-inject-svg />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img class="icon " src="assets/img/icons/social/twitter.svg" alt="twitter social icon" data-inject-svg />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img class="icon " src="assets/img/icons/social/youtube.svg" alt="youtube social icon" data-inject-svg />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img class="icon " src="assets/img/icons/social/medium.svg" alt="medium social icon" data-inject-svg />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img class="icon " src="assets/img/icons/social/facebook.svg" alt="facebook social icon" data-inject-svg />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="row justify-content-center">
+          <div class="col col-md-auto text-center">
+            <small>&copy;IEEE Pacific Visualization Conference 2025
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+    </a>
+    <script>includeHTML();</script>
+    <!-- Required vendor scripts (Do not remove) -->
+
+    <script>
+      //sort hotels
+        // Function to remove 'active' class from all buttons
+        function clearActive() {
+          document.querySelectorAll('.nav-link.btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        document.querySelectorAll('.nav-link.btn').forEach(button => {
+          button.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent any default link behavior (like scrolling)
+
+            const sortType = this.dataset.sort;
+            const hotelContainer = document.getElementById('hotels');
+            const hotelBlocks = Array.from(hotelContainer.querySelectorAll('.hotel-block'));
+
+            // Remove active class from all, add to clicked one
+            clearActive();
+            this.classList.add('active');
+
+            // Record original positions (for animation)
+            const positions = hotelBlocks.map(block => block.getBoundingClientRect());
+
+            // Sort based on data attribute
+            hotelBlocks.sort((a, b) => {
+              const aValue = parseInt(a.dataset[sortType], 10);
+              const bValue = parseInt(b.dataset[sortType], 10);
+              return (sortType === 'star') ? bValue - aValue : aValue - bValue;
+            });
+
+            // Re-append sorted
+            hotelBlocks.forEach(block => hotelContainer.appendChild(block));
+
+            // // Animate movement (FLIP technique)
+            // hotelBlocks.forEach((block, index) => {
+            //   const newPosition = block.getBoundingClientRect();
+            //   const deltaY = positions[index].top - newPosition.top;
+            //   block.style.transform = `translateY(${deltaY}px)`;
+            //   block.offsetHeight; // Force reflow
+            //   block.style.transition = 'transform 1.5s ease';
+            //   block.style.transform = '';
+            // });
+
+            // // Clean up transition
+            // hotelBlocks.forEach(block => {
+            //   block.addEventListener('transitionend', function handler() {
+            //     block.style.transition = '';
+            //     block.removeEventListener('transitionend', handler);
+            //   });
+            // });
+          });
+        });
+    </script>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+    <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+    <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="assets/js/flatpickr.min.js"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+    <script type="text/javascript" src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- Isotope (masonry layouts and filtering) -->
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- jarallax (parallax effect and video backgrounds) -->
+    <script type="text/javascript" src="assets/js/jarallax.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-element.min.js"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- jQuery smartWizard facilitates steppable wizard content -->
+    <script type="text/javascript" src="assets/js/jquery.smartWizard.min.js"></script>
+    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+    <script type="text/javascript" src="assets/js/plyr.polyfilled.min.js"></script>
+    <!-- Prism (displays formatted code boxes) -->
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="assets/js/svg-injector.umd.production.js"></script>
+    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+    <script type="text/javascript" src="assets/js/twitterFetcher_min.js"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script type="text/javascript" src="assets/js/typed.min.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript">
+      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+    </script>
+
+  </body>
+
+</html>
