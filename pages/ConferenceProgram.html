@@ -66,6 +66,153 @@
       .to {
         rotate: 90deg;
       }
+
+      .overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.8);
+        display: none;
+        flex-direction: column; /* 使子元素垂直排列 */
+        align-items: center;     /* 水平置中，可依需求調整 */
+        justify-content:space-between; /* 從上開始排列 */
+        z-index: 9999;
+      }
+
+      .overlay-content {
+        background: rgb(0, 0, 0, 0.8);
+        padding: 3rem;
+        border-radius: 8px;
+        bottom: 0;
+        left: 0;
+        max-height: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 10000;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px; right: 15px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #f8f9fa;
+        z-index: 10001; /* 確保高於內容層 */
+      }
+
+      .gallery {
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100vw;
+        
+      }
+
+      .image-container {
+        
+        width: 1500px;
+        overflow: hidden;
+      }
+
+      #dynamicImage {
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        display: inline-block;
+        margin-right: 1rem;
+      }
+      #prevBtn, #nextBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255,255,255,0.7);
+        border: none;
+        cursor: pointer;
+        z-index: 10001;
+      }
+      #prevBtn {
+        left: 10px;
+      }
+      #nextBtn {
+        right: 10px;
+      }
+
+      .selected-thumbnail {
+        border: 4px solid #ffffff; /* 白色外框 */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 白色陰影 */
+      }
+      @media (max-width: 600px) {
+      .overlay {
+        padding: 1rem;
+        justify-content: flex-start;
+      }
+
+      .image-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+        margin-top: 10rem; /* ⭐️ 從主圖往下推 */
+        display: flex;
+        justify-content: center;
+      }
+
+      #dynamicImage {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding-top: 1rem;
+      }
+
+      .gallery {
+        padding: 0 1rem;
+        margin-top: 0.5rem; /* ⭐️ 再微調內部與 download 的距離 */
+      }
+
+      .gallery img {
+        width: 100px;
+        margin-right: 0.5rem;
+      }
+
+      .overlay-content {
+        padding: 1.5rem 1rem;
+        margin-top: 10rem; /* ⭐️ 從主圖往下推 */
+        max-height: 50vh;
+        overflow-x: auto;
+      }
+
+      .close-btn {
+        font-size: 20px;
+        top: 8px;
+        right: 10px;
+      }
+
+      #prevBtn, #nextBtn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.6rem;
+        margin-top: -3.5rem; /* ⭐️ 從主圖往下推 */
+      }
+
+      #prevBtn {
+        left: 5px;
+      }
+
+      #nextBtn {
+        right: 5px;
+      }
+    }
+
     </style>
     <!--
     <style>
@@ -334,7 +481,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/communication/add-user.svg" alt="icon" class="avatar avatar-sm mr-2"> Registration</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>8:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>8:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="15x760sUHxmy93bdootkk-9EFgWNoix6Z">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -346,7 +493,7 @@
                     <a href="DPH-VisWorkshop.html#DPH1"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2"> DPH-Vis Workshop Session 1</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1wcPt8qcHMpjUb40MuEJMc6nS2RU9rnQn">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -360,7 +507,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Morning Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>10:30am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>10:30am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -372,7 +519,7 @@
                     <a href="DPH-VisWorkshop.html#DPH2"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2"> DPH-Vis Workshop Session 2 </h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1wcPt8qcHMpjUb40MuEJMc6nS2RU9rnQn">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -386,7 +533,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/miso-soup.svg" alt="icon" class="avatar avatar-sm mr-2">Lunch</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>12:30pm</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>12:30pm</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -399,7 +546,7 @@
                     <a href="VisMeetsAIWorkshop.html#AIWorkshop1"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">VisMeetsAI Workshop Session 1 (R1001)</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>2:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>2:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1FvoPwaw2cYH33hpke40pzFuTkQ_X1IXx">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -413,7 +560,7 @@
                     <a href="SciVisWorkshop.html#SciVis1"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">SciVis Workshop Session 1 (R1002)</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>2:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>2:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1EfyJkL5oELrXtGocvqZr_65KZajG9yjL">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -427,7 +574,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Afternoon Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>3:35pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>3:35pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1RGEdutsb5zngIqinOl6OLBGcwMHslsSL">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -439,7 +586,7 @@
                     <a href="VisMeetsAIWorkshop.html#AIWorkshop2"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">VisMeetsAI Workshop Session 2 (R1001)</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>4:05pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>4:05pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1FvoPwaw2cYH33hpke40pzFuTkQ_X1IXx">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -453,7 +600,7 @@
                     <a href="SciVisWorkshop.html#SciVis2"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">SciVis Workshop Session 2 (R1002)</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>4:05pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>4:05pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1EfyJkL5oELrXtGocvqZr_65KZajG9yjL">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -467,7 +614,7 @@
                     <a href="Reception.html#Reception1"><h5 class="mb-0"><img src="assets/img/icons/theme/food/glass-martini.svg" alt="icon" class="avatar avatar-sm mr-2">Welcome Reception</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>6:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>6:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1F4KsZ28yi-KfZYZSto9oMpGHlffg-LA9">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -482,7 +629,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/communication/add-user.svg" alt="icon" class="avatar avatar-sm mr-2"> Registration</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>8:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>8:30am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -493,7 +640,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/home/door-open.svg" alt="icon" class="avatar avatar-sm mr-2"> Opening <br></h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>9:00am</b></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -507,7 +654,7 @@
                     <a href="Keynotes.html#Keynote1"><h5 class="mb-0"><img src="assets/img/icons/theme/devices/mic.svg" alt="icon" class="avatar avatar-sm mr-2"> Keynote 1: Remco Chang <span class="h6 mb-0"><img src="assets/img/Keynotes/remco_head.png" alt="icon" class="avatar avatar-sm mr-2"></span> <br> </h5></a> 
                   </div>
                   <div class="col-md">
-                    <span><b>9:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>9:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1Mx2Z532avj9MlHiJh6VUZJOKQ4719hfr">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -521,7 +668,7 @@
                     <a href="PostersAndVisualStorytelling.html#PVS"><h5 class="mb-0"><img src="assets/img/icons/theme/media/forward.svg" alt="icon" class="avatar avatar-sm mr-2"> Poster/Storytellng Fast Forward </h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>10:30am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>10:30am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1yJRxWFgb7iNJGRw5zU6-f1tAUFsHEL-C">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -535,7 +682,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Morning Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>10:45am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>10:45am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -547,7 +694,7 @@
                     <a href="TechnicalSessions.html#Session1"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">Graph, Tree and Network Visualization</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>11:05am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>11:05am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1Mx2Z532avj9MlHiJh6VUZJOKQ4719hfr">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -561,7 +708,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/miso-soup.svg" alt="icon" class="avatar avatar-sm mr-2">Lunch</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>12:30pm</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>12:30pm</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -573,7 +720,7 @@
                     <a href="TechnicalSessions.html#Session2"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">AI and Visual LLM</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>1:50pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>1:50pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1oH8NLUHlbebRGnsdyhEiQvlKfM8KeXbM">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -587,7 +734,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Afternoon Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>3:30pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>3:30pm</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -599,7 +746,7 @@
                     <a href="TechnicalSessions.html#Session3"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">Visualization Techniques and Methods</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>4:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>4:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1oH8NLUHlbebRGnsdyhEiQvlKfM8KeXbM">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -615,7 +762,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/communication/add-user.svg" alt="icon" class="avatar avatar-sm mr-2"> Registration</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>8:30am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>8:30am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -627,7 +774,7 @@
                     <a href="TechnicalSessions.html#Session4"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">Scientific and Biomedical Visualization</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="12Lc5WVVPDqPaxwiYPM5ZGzmH0kK6VdHi">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -641,7 +788,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Morning Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>10:30am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>10:30am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -653,7 +800,7 @@
                     <a href="https://visstory.github.io/" target="_blank"><h5 class="mb-0"><img src="assets/img/icons/theme/communication/chat-2.svg" alt="icon" class="avatar avatar-sm mr-2"> Storytelling (R1001) </h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="12Lc5WVVPDqPaxwiYPM5ZGzmH0kK6VdHi">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -668,7 +815,7 @@
                     <a href="PostersAndVisualStorytelling.html#PVS"><h5 class="mb-0"><img src="assets/img/icons/theme/home/bulb-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Posters (R1002) </h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1846cIFMUUYlLvclwqjx6bQK9m-7tMsql">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -680,7 +827,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/miso-soup.svg" alt="icon" class="avatar avatar-sm mr-2">Lunch</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>12:30pm</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>12:30pm</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -692,7 +839,7 @@
                     <a href="TechnicalSessions.html#Session5"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">3D and Immersive Visualization</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>1:50pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>1:50pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1-9Ej4YLUQkoxzX9AKuwVvl336aHaoFIy">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -706,7 +853,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Afternoon Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>3:30pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>3:30pm</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -718,7 +865,7 @@
                     <a href="TechnicalSessions.html#Session6"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">Applications</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>4:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>4:00pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1-9Ej4YLUQkoxzX9AKuwVvl336aHaoFIy">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -732,7 +879,7 @@
                     <a href="Banquet.html#Banquet1"><h5 class="mb-0"><img src="assets/img/icons/theme/food/dinner.svg" alt="icon" class="avatar avatar-sm mr-2">Banquet</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>6:30pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>6:30pm</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1hrXN9pUgiQbbn2P2b56keR9nc9D-0lFr">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -746,7 +893,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/communication/add-user.svg" alt="icon" class="avatar avatar-sm mr-2"> Registration</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>8:30am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>8:30am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -757,7 +904,7 @@
                     <a href="TechnicalSessions.html#Session7"><h5 class="mb-0"><img src="assets/img/icons/theme/shopping/chart-bar-1.svg" alt="icon" class="avatar avatar-sm mr-2">Taxonomy, Generative AI and Creative Visualization Tools</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>9:00am</b>&nbsp;<span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1ya5oWRgGBQwBwZ2SdyrwTpBwnTCPc9G_">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -772,7 +919,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/food/coffee-1.svg" alt="icon" class="avatar avatar-sm mr-2"> Morning Break</h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>10:35am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>10:35am</b></span>
                   </div>
                   <div class="col-md">
                     <span>–</span>
@@ -784,7 +931,7 @@
                     <a href="Keynotes.html#Keynote2"><h5 class="mb-0"><img src="assets/img/icons/theme/devices/mic.svg" alt="icon" class="avatar avatar-sm mr-2"> Keynote 2: Ross Maciejewski <span class="h6 mb-0"><img src="assets/img/Keynotes/Ross_head.png" alt="icon" class="avatar avatar-sm mr-2"></span> <br> </h5></a> 
                   </div>
                   <div class="col-md">
-                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>11:00am</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1ya5oWRgGBQwBwZ2SdyrwTpBwnTCPc9G_">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -798,7 +945,7 @@
                     <a href="#"><h5 class="mb-0"><img src="assets/img/icons/theme/home/door-open.svg" alt="icon" class="avatar avatar-sm mr-2"> Closing </h5></a>
                   </div>
                   <div class="col-md">
-                    <span><b>12:00pm</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1">Photo</a><span></span>
+                    <span><b>12:00pm</b><span><a href="#" class="btn btn-sm btn-outline-primary mx-1 openPhotoBtn" data-folder-id="1ya5oWRgGBQwBwZ2SdyrwTpBwnTCPc9G_">Photo</a><span></span>
                   </div>
                   <div class="col-md">
                     <div class="d-flex align-items-center mt-2 mt-md-0">
@@ -810,6 +957,27 @@
               </div>
               
             </div>
+
+            <div id="photoOverlay" class="overlay">
+              <button id="closeOverlay" class="close-btn">&times;</button>
+              <button id="prevBtn" class="nav-btn">&#8592;</button>
+              <button id="nextBtn" class="nav-btn">&#8594;</button>
+              <div class="image-container">
+                <img id="dynamicImage" src="" alt="">
+              </div>
+              <div class="overlay-content">
+                
+                <div id="galleryContainer" class="gallery" style="display: flex; flex-wrap: nowrap; gap: 1rem;"></div>
+              </div>
+            </div>
+            <!-- <div id="photoOverlay" class="overlay">
+              <div class="overlay-content">
+                <button id="closeOverlay" class="close-btn">&times;</button>
+                <h2>這是你的 Overlay</h2>
+                <p>目前還沒有圖片，但這裡是你未來顯示相片的地方。</p>
+              </div>
+            </div> -->
+
           </div>
         <!-- </section> -->
 
@@ -1030,6 +1198,149 @@
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
       <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
+    <!-- <script>
+      // 綁定所有 Photo 按鈕
+      document.querySelectorAll('.openPhotoBtn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+    
+          // 取得圖片陣列
+          const images = JSON.parse(this.getAttribute('data-images'));
+    
+          // 取得容器並清空
+          const gallery = document.getElementById('galleryContainer');
+          gallery.innerHTML = '';
+    
+          // 動態建立每張圖片
+          images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = 'Gallery Image';
+            gallery.appendChild(img);
+          });
+    
+          // 顯示 overlay
+          document.getElementById('photoOverlay').style.display = 'flex';
+        });
+      });
+    
+      // 關閉 overlay
+      document.getElementById('closeOverlay').addEventListener('click', function () {
+        document.getElementById('photoOverlay').style.display = 'none';
+      });
+    </script> -->
+    <script>
+      // 綁定所有 class 為 openPhotoBtn 的按鈕
+      document.querySelectorAll('.openPhotoBtn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); // 防止跳頁
+          document.getElementById('photoOverlay').style.display = 'flex'; // 顯示 overlay
+        });
+      });
+    
+      // 關閉 overlay
+      document.getElementById('closeOverlay').addEventListener('click', function () {
+        document.getElementById('photoOverlay').style.display = 'none';
+      });
+    </script>
+
+    <script>
+      let currentIndex = 0;
+      let currentImages = [];
+      let thumbnailElements = [];
+      let imgUrl = ''; // ✅ 保留 imgUrl
+
+      function updateMainImage(index) {
+        currentIndex = index;
+        imgUrl = currentImages[currentIndex].thumbnail + "&sz=w1500";
+        document.getElementById('dynamicImage').src = imgUrl;
+
+        // 更新縮圖外框樣式
+        thumbnailElements.forEach(el => el.classList.remove('selected-thumbnail'));
+        if (thumbnailElements[currentIndex]) {
+          thumbnailElements[currentIndex].classList.add('selected-thumbnail');
+        }
+      }
+
+      document.querySelectorAll('.openPhotoBtn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const folderId = this.dataset.folderId;
+          const apiUrl = `https://script.google.com/macros/s/AKfycbwY84L51oCc6DeojN_IhuwLLeZjBS40UyYMYnB_f03aOgmZikSGCQVCj6WzXIFyP3Ju/exec?f=${folderId}`;
+
+          fetch(apiUrl)
+            .then(res => res.json())
+            .then(images => {
+              currentImages = images;
+              currentIndex = 0;
+              thumbnailElements = [];
+
+              const gallery = document.getElementById('galleryContainer');
+              gallery.innerHTML = '';
+
+              const imgElement = document.getElementById('dynamicImage');
+
+              images.forEach((img, index) => {
+                const imgTag = document.createElement('img');
+                imgTag.src = img.thumbnail;
+                imgTag.style.maxWidth = '200px';
+                imgTag.style.cursor = 'pointer';
+
+                imgTag.addEventListener('click', () => {
+                  updateMainImage(index);
+                });
+
+                thumbnailElements.push(imgTag);
+
+                // 轉換成可下載連結
+                const fileIdMatch = img.url.match(/\/d\/(.*?)\//);
+                let downloadUrl = img.url;
+                if (fileIdMatch && fileIdMatch[1]) {
+                  const fileId = fileIdMatch[1];
+                  downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+                }
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = downloadUrl;
+                downloadLink.innerText = 'Download';
+                downloadLink.style.display = 'block';
+                downloadLink.setAttribute('download', '');
+                downloadLink.setAttribute('target', '_blank');
+
+                const wrapper = document.createElement('div');
+                wrapper.appendChild(imgTag);
+                wrapper.appendChild(downloadLink);
+                gallery.appendChild(wrapper);
+              });
+
+              updateMainImage(0); // 顯示第一張 & 設定 imgUrl & 高亮
+              document.getElementById('photoOverlay').style.display = 'flex';
+            })
+            .catch(err => {
+              console.error("Fetch 錯誤：", err);
+            });
+        });
+      });
+
+      document.getElementById('closeOverlay').addEventListener('click', function () {
+        document.getElementById('photoOverlay').style.display = 'none';
+      });
+
+      document.getElementById('prevBtn').addEventListener('click', () => {
+        if (currentImages.length === 0) return;
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateMainImage(currentIndex);
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        if (currentImages.length === 0) return;
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateMainImage(currentIndex);
+      });
+    </script>
+
+    
     <script>includeHTML();</script>
     <!-- Required vendor scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
