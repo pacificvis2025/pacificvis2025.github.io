@@ -52,6 +52,26 @@
         font-weight: bold;
         margin-right: 8px;
       }
+      .badge-best {
+        background-color: gold;
+        color: darkblue;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .badge-honorable {
+        background-color: skyblue;
+        /* color: white; */
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
       .hidden {
         display: none;
       }
@@ -308,6 +328,7 @@
         <h5><span class="badge-conf">conf</span><strong>Papers accepted in Conference track (10 min talk + 2 min Q&A)</strong></h5>
         <h5><span class="badge-note">note</span><strong>Papers accepted in Visualization Notes track (8 min talk + 2 min Q&A)</strong></h5>
         <h5><span class="badge-remote">remote</span><strong>Remote presentation in the track</strong></h5>
+        <h5><span class="badge-best">Best paper</span><span class="badge-honorable">Honorable mention</span><strong>Best and honorable mention papers accepted in the track</strong></h5>
         <strong><a href='assets/PacificVis 2025 Template.pptx'>Powerpoint Teamplte</a></strong>
         <!-- <br>
 
@@ -417,7 +438,7 @@
               </div>
 
               <div class="paper note">
-              <p><span class="badge-note">note</span><strong>dcGG, dcRNG: New Degree-Constrained Shape-Based Faithfulness Metrics</strong></p>
+              <p><span class="badge-note">note</span><strong>dcGG, dcRNG: New Degree-Constrained Shape-Based Faithfulness Metrics</strong>&nbsp;<span class="badge-honorable">Honorable mention@note</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Michael Fang (University of Sydney)</li>
@@ -505,7 +526,7 @@
               </div>
 
               <div class="paper conf">
-              <p><span class="badge-conf">conf</span><strong>SmartMLVs: LLM-enabled Multiple Linked Views Generation for Interactive Visualization</strong>&nbsp;<span class="badge-remote">remote</span></p>
+              <p><span class="badge-conf">conf</span><strong>SmartMLVs: LLM-enabled Multiple Linked Views Generation for Interactive Visualization</strong>&nbsp;<span class="badge-remote">remote</span><span class="badge-honorable">Honorable mention@conf</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Tian Qiu (Fudan University)</li>
@@ -690,7 +711,7 @@
               <hr>
 
               <div class="paper tvcg">
-              <p><span class="badge-tvcg">tvcg</span><strong>Explorable INR: An Implicit Neural Representation for Ensemble Simulation Enabling Efficient Spatial and Parameter Exploration</strong></p>
+              <p><span class="badge-tvcg">tvcg</span><strong>Explorable INR: An Implicit Neural Representation for Ensemble Simulation Enabling Efficient Spatial and Parameter Exploration</strong>&nbsp;<span class="badge-best">Best paper@tvcg</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Yi-Tang Chen (The Ohio State University)</li>
@@ -763,7 +784,7 @@
               </div>
 
               <div class="paper conf">
-              <p><span class="badge-conf">conf</span><strong>Enabling Fast and Accurate Crowdsourced Annotation for Elevation-Aware Flood Extent Mapping</strong></p>
+              <p><span class="badge-conf">conf</span><strong>Enabling Fast and Accurate Crowdsourced Annotation for Elevation-Aware Flood Extent Mapping</strong>&nbsp;<span class="badge-honorable">Honorable mention@conf</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Landon Dyken (University of Illinois Chicago)</li>
@@ -870,7 +891,7 @@
               </div>
 
               <div class="paper conf">
-              <p><span class="badge-conf">conf</span><strong>ViSNeRF: Efficient Multidimensional Neural Radiance Field Representation for Visualization Synthesis of Dynamic Volumetric Scenes</strong>&nbsp;<span class="badge-remote">remote</span></p>
+              <p><span class="badge-conf">conf</span><strong>ViSNeRF: Efficient Multidimensional Neural Radiance Field Representation for Visualization Synthesis of Dynamic Volumetric Scenes</strong>&nbsp;<span class="badge-remote">remote</span><span class="badge-honorable">Honorable mention@conf</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Siyuan Yao (University of Notre Dame)</li>
@@ -935,7 +956,7 @@
               </div>
 
               <div class="paper tvcg">
-              <p><span class="badge-tvcg">tvcg</span><strong>PrettiSmart: Visual Interpretation of Smart Contracts via Simulation</strong>&nbsp;<span class="badge-remote">remote</span></p>
+              <p><span class="badge-tvcg">tvcg</span><strong>PrettiSmart: Visual Interpretation of Smart Contracts via Simulation</strong>&nbsp;<span class="badge-remote">remote</span><span class="badge-honorable">Honorable mention@tvcg</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Xiaolin Wen (Nanyang Technological University)</li>
@@ -1038,7 +1059,7 @@
               <hr>
 
               <div class="paper tvcg">
-              <p><span class="badge-tvcg">tvcg</span><strong>VisTaxa: Developing a Taxonomy of Historical Visualizations</strong>&nbsp;<span class="badge-remote">remote</span></p>
+              <p><span class="badge-tvcg">tvcg</span><strong>VisTaxa: Developing a Taxonomy of Historical Visualizations</strong>&nbsp;<span class="badge-remote">remote</span><span class="badge-honorable">Honorable mention@tvcg</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Yu Zhang (University of Oxford)</li>
@@ -1087,7 +1108,7 @@
               </div>
 
               <div class="paper conf">
-              <p><span class="badge-conf">conf</span><strong>More Than Beautiful: Exploring Design Features, Practical Perspectives, and Implications of Artistic Data Visualization</strong>&nbsp;<span class="badge-remote">remote</span></p>
+              <p><span class="badge-conf">conf</span><strong>More Than Beautiful: Exploring Design Features, Practical Perspectives, and Implications of Artistic Data Visualization</strong>&nbsp;<span class="badge-remote">remote</span><span class="badge-best">Best paper@conf</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Xingyu Lan (Fudan University)</li>
@@ -1099,7 +1120,7 @@
               </div>
 
               <div class="paper note">
-              <p><span class="badge-note">note</span><strong>Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts</strong></p>
+              <p><span class="badge-note">note</span><strong>Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts</strong>&nbsp;<span class="badge-best">Best paper@note</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>Seon Gyeom Kim (KAIST)</li>
@@ -1127,7 +1148,7 @@
               </div>
 
               <div class="paper note">
-              <p><span class="badge-note">note</span><strong>MATIC: Multilingual Accurate Textual Image Customization via Joint Generative Artificial Intelligence</strong></p>
+              <p><span class="badge-note">note</span><strong>MATIC: Multilingual Accurate Textual Image Customization via Joint Generative Artificial Intelligence</strong>&nbsp;<span class="badge-honorable">Honorable mention@note</span></p>
               <div class="d-flex align-items-center my-2">
                 <ul>
                   <li>CHIAO-HSIN WU (National Taiwan Normal University)</li>
