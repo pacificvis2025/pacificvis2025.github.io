@@ -110,16 +110,19 @@
       }
 
       .image-container {
-        
         width: 1500px;
+        height: auto;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       #dynamicImage {
         padding-top: 50px;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         display: block;
       }
 
@@ -966,17 +969,9 @@
                 <img id="dynamicImage" src="" alt="">
               </div>
               <div class="overlay-content">
-                
                 <div id="galleryContainer" class="gallery" style="display: flex; flex-wrap: nowrap; gap: 1rem;"></div>
               </div>
             </div>
-            <!-- <div id="photoOverlay" class="overlay">
-              <div class="overlay-content">
-                <button id="closeOverlay" class="close-btn">&times;</button>
-                <h2>這是你的 Overlay</h2>
-                <p>目前還沒有圖片，但這裡是你未來顯示相片的地方。</p>
-              </div>
-            </div> -->
 
           </div>
         <!-- </section> -->
@@ -1198,37 +1193,7 @@
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
       <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
-    <!-- <script>
-      // 綁定所有 Photo 按鈕
-      document.querySelectorAll('.openPhotoBtn').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-    
-          // 取得圖片陣列
-          const images = JSON.parse(this.getAttribute('data-images'));
-    
-          // 取得容器並清空
-          const gallery = document.getElementById('galleryContainer');
-          gallery.innerHTML = '';
-    
-          // 動態建立每張圖片
-          images.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = 'Gallery Image';
-            gallery.appendChild(img);
-          });
-    
-          // 顯示 overlay
-          document.getElementById('photoOverlay').style.display = 'flex';
-        });
-      });
-    
-      // 關閉 overlay
-      document.getElementById('closeOverlay').addEventListener('click', function () {
-        document.getElementById('photoOverlay').style.display = 'none';
-      });
-    </script> -->
+
     <script>
       // 綁定所有 class 為 openPhotoBtn 的按鈕
       document.querySelectorAll('.openPhotoBtn').forEach(btn => {
